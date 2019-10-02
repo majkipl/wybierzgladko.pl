@@ -1,0 +1,141 @@
+$color_1: #fff;
+$color_2: #ddd;
+$color_3: #EBB52D;
+$color_4: #999;
+$background-color_1: #000;
+$background-color_2: #3C3C3C;
+$background-color_3: #212121;
+
+.sbHolder {
+    background-color: $background-color_1;
+    border: 2px solid #fff;
+    font-size: 18px;
+    font-weight: normal;
+    height: 34px;
+    position: relative;
+    width: 300px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.sbSelector {
+    display: block;
+    height: 30px;
+    left: 0;
+    line-height: 30px;
+    outline: none;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 10px;
+    top: 0;
+    width: 170px;
+    &:link {
+        color: $color_1;
+        outline: none;
+        text-decoration: none;
+    }
+    &:visited {
+        color: $color_1;
+        outline: none;
+        text-decoration: none;
+    }
+    &:hover {
+        color: $color_1;
+        outline: none;
+        text-decoration: none;
+    }
+}
+.sbToggle {
+    display: block;
+    height: 30px;
+    outline: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 34px;
+    border-left: 2px solid #fff;
+    &:before {
+        content: '';
+        background-image: url('/images/ionicons_2-0-1_arrow-down-b_128_0_ffffff_none.png');
+        display: block;
+        height: 30px;
+        outline: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 34px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50%;
+    }
+}
+.sbToggleOpen {
+    &:before {
+        transform: rotate(180deg);
+    }
+}
+.sbHolderDisabled {
+    background-color: $background-color_2;
+    border: solid 1px #515151;
+}
+.sbOptions {
+    background-color: $background-color_3;
+    border: solid 2px #fff;
+    list-style: none;
+    left: -1px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    width: 300px;
+    z-index: 1;
+    overflow-y: auto;
+    margin-top: 4px;
+    max-width: 100%;
+    li {
+        padding: 0 7px;
+    }
+    a {
+        border-bottom: dotted 1px #515151;
+        display: block;
+        outline: none;
+        padding: 7px 0 7px 3px;
+        &:link {
+            color: $color_2;
+            text-decoration: none;
+        }
+        &:visited {
+            color: $color_2;
+            text-decoration: none;
+        }
+        &:hover {
+            color: $color_3;
+        }
+        &:focus {
+            color: $color_3;
+        }
+    }
+    a.sbFocus {
+        color: $color_3;
+    }
+    li.last {
+        a {
+            border-bottom: none;
+        }
+    }
+    .sbDisabled {
+        border-bottom: dotted 1px #515151;
+        color: $color_4;
+        display: block;
+        padding: 7px 0 7px 3px;
+    }
+    .sbGroup {
+        border-bottom: dotted 1px #515151;
+        color: $color_3;
+        display: block;
+        font-weight: bold;
+        padding: 7px 0 7px 3px;
+    }
+    .sbSub {
+        padding-left: 17px;
+    }
+}

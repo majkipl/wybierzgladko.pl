@@ -45,8 +45,6 @@
     {{--    <!--Facebook Like Button OpenGraph Settings End-->--}}
 
     <!-- Styles -->
-    <link rel="stylesheet" href="https://use.typekit.net/rnp1gho.css">
-
     <link href="{{ asset('css/front.css') }}" rel="stylesheet">
 
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
@@ -55,6 +53,8 @@
 <body class="cbp-spmenu-push{{ isset($include_body_class) ? ' ' . $include_body_class : '' }}">
 
 @include('common.loader')
+@include('common.fog')
+
 @include('common.top')
 
 @yield('content')

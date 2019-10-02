@@ -1,0 +1,171 @@
+[
+    {
+        "ask": "Czego najbardziej nie lubisz w prasowaniu?",
+        "answers": [
+            {
+                "answer": "Zastanawiania się, jaką temperaturę wybrać.",
+                "points": {
+                    "ot": 13,
+                    "i": 0,
+                    "psu": 0,
+                    "sg": 0
+                }
+            },
+            {
+                "answer": "Kiedy zdarzy mi się upuścić żelazko.",
+                "points": {
+                    "ot": 0,
+                    "i": 11,
+                    "psu": 0,
+                    "sg": 0
+                }
+            },
+            {
+                "answer": "Mocno pogiętych, grubych materiałów.",
+                "points": {
+                    "ot": 0,
+                    "i": 0,
+                    "psu": 12,
+                    "sg": 0
+                }
+            },
+            {
+                "answer": "Rozkładania deski.",
+                "points": {
+                    "ot": 0,
+                    "i": 0,
+                    "psu": 0,
+                    "sg": 12
+                }
+            }
+        ]
+    },
+    {
+        "ask": "Kiedy zabierasz się za prasowanie?",
+        "answers": [
+            {
+                "answer": "Nieregularnie, raz na jakiś czas.",
+                "points": {
+                    "ot": 8,
+                    "i": 0,
+                    "psu": 0,
+                    "sg": 0
+                }
+            },
+            {
+                "answer": "Pomiędzy innymi codziennymi czynnościami.",
+                "points": {
+                    "ot": 0,
+                    "i": 8,
+                    "psu": 0,
+                    "sg": 0
+                }
+            },
+            {
+                "answer": "Regularnie prasuję duże ilości ubrań.",
+                "points": {
+                    "ot": 0,
+                    "i": 0,
+                    "psu": 8,
+                    "sg": 0
+                }
+            },
+            {
+                "answer": "W pośpiechu, chwilę przed wyjściem z domu.",
+                "points": {
+                    "ot": 0,
+                    "i": 0,
+                    "psu": 0,
+                    "sg": 7
+                }
+            }
+        ]
+    },
+    {
+        "ask": "Na czym Ci najbardziej zależy?",
+        "answers": [
+            {
+                "answer": "Na tym, by nie zniszczyć ubrań.",
+                "points": {
+                    "ot": 6,
+                    "i": 0,
+                    "psu": 0,
+                    "sg": 0
+                }
+            },
+            {
+                "answer": "Na wytrzymałości, by żelazko nie popsuło się po upadku.",
+                "points": {
+                    "ot": 0,
+                    "i": 8,
+                    "psu": 0,
+                    "sg": 0
+                }
+            },
+            {
+                "answer": "Na szybkim prasowaniu bez wysiłku.",
+                "points": {
+                    "ot": 0,
+                    "i": 0,
+                    "psu": 6,
+                    "sg": 0
+                }
+            },
+            {
+                "answer": "Na łatwym prasowaniu w pionie.",
+                "points": {
+                    "ot": 0,
+                    "i": 0,
+                    "psu": 0,
+                    "sg": 6
+                }
+            }
+        ]
+    },
+    {
+        "ask": "Czy dostosowujesz temperaturę do rzeczy, które prasujesz?",
+        "answers": [
+            {
+                "answer": "Nie",
+                "points": {
+                    "ot": 4,
+                    "i": 0,
+                    "psu": 0,
+                    "sg": 4
+                }
+            },
+            {
+                "answer": "Tak",
+                "points": {
+                    "ot": 0,
+                    "i": 3,
+                    "psu": 3,
+                    "sg": 0
+                }
+            }
+        ]
+    },
+    {
+        "ask": "Czy często podróżujesz?",
+        "answers": [
+            {
+                "answer": "Nie",
+                "points": {
+                    "ot": 1,
+                    "i": 2,
+                    "psu": 1,
+                    "sg": 0
+                }
+            },
+            {
+                "answer": "Tak",
+                "points": {
+                    "ot": 0,
+                    "i": 0,
+                    "psu": 0,
+                    "sg": 3
+                }
+            }
+        ]
+    }
+]
