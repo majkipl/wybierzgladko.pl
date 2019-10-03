@@ -43,10 +43,11 @@ const starter = {
 
             starter.lightslider.hero();
             starter.lightslider.reviews();
-
             starter.quiz.init();
             starter.selectbox.init();
             starter.parallax.init();
+
+            starter.main.whereBuy();
         },
 
         resize: function() {
@@ -156,17 +157,34 @@ const starter = {
             }
         },
 
+        whereBuy: function() {
+            const whereBuy = $("#whereBuy");
+            if( whereBuy.length > 0 ) {
+                const product_id = whereBuy.data('product');
+                const items = shops['popup-' + product_id];
+
+                $.each( items, function( key, url ) {
+                    if(url !== '#') {
+                        const item = $('<div>').addClass('col-12 col-sm-6 col-md-4 col-lg-3 shop-item');
+                        const a = $('<a>').addClass('shop').attr('href',url).attr('title', 'KUP TERAZ').attr('target', '_blank');
+                        item.append( a );
+                        $("section#whereBuy .shops").append( item );
+                    }
+                });
+            }
+        },
+
         getElementDomByURL: function ($url) {
             switch ($url) {
-                case '/wybierz-gladko/':
+                case '/wybierz-gladko':
                     return 'section#test';
-                case '/zelazka/':
+                case '/zelazka':
                     return 'section#comparison';
-                case '/kontakt/':
+                case '/kontakt':
                     return '#contact';
-                case '/serwis/':
+                case '/serwis':
                     return '#service';
-                case '/satysfakcja-gwarantowana/':
+                case '/satysfakcja-gwarantowana':
                     return '#hesitate';
             }
         },

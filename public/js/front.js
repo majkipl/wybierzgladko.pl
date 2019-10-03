@@ -42250,6 +42250,7 @@ var starter = {
       starter.quiz.init();
       starter.selectbox.init();
       starter.parallax.init();
+      starter.main.whereBuy();
     },
     resize: function resize() {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(".mCS_no_scrollbar").removeClass('mCS_no_scrollbar');
@@ -42343,17 +42344,32 @@ var starter = {
         }, 1000);
       }
     },
+    whereBuy: function whereBuy() {
+      var whereBuy = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#whereBuy");
+      if (whereBuy.length > 0) {
+        var product_id = whereBuy.data('product');
+        var items = shops['popup-' + product_id];
+        jquery__WEBPACK_IMPORTED_MODULE_0___default.a.each(items, function (key, url) {
+          if (url !== '#') {
+            var item = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div>').addClass('col-12 col-sm-6 col-md-4 col-lg-3 shop-item');
+            var a = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<a>').addClass('shop').attr('href', url).attr('title', 'KUP TERAZ').attr('target', '_blank');
+            item.append(a);
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()("section#whereBuy .shops").append(item);
+          }
+        });
+      }
+    },
     getElementDomByURL: function getElementDomByURL($url) {
       switch ($url) {
-        case '/wybierz-gladko/':
+        case '/wybierz-gladko':
           return 'section#test';
-        case '/zelazka/':
+        case '/zelazka':
           return 'section#comparison';
-        case '/kontakt/':
+        case '/kontakt':
           return '#contact';
-        case '/serwis/':
+        case '/serwis':
           return '#service';
-        case '/satysfakcja-gwarantowana/':
+        case '/satysfakcja-gwarantowana':
           return '#hesitate';
       }
     },
