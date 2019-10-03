@@ -50,7 +50,7 @@
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
 </head>
 
-<body class="cbp-spmenu-push{{ isset($include_body_class) ? ' ' . $include_body_class : '' }}">
+<body class="cbp-spmenu-push {{ isset($include_body_class) ? $include_body_class : '' }}">
 
 @include('common.loader')
 @include('common.fog')

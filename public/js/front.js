@@ -41640,15 +41640,15 @@ if (token) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 __webpack_require__(/*! malihu-custom-scrollbar-plugin */ "./node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js");
-__webpack_require__(/*! ./plugins/jquery.selectbox */ "./resources/js/plugins/jquery.selectbox.js");
+__webpack_require__(/*! ./plugins/selectbox/jquery.selectbox */ "./resources/js/plugins/selectbox/jquery.selectbox.js");
 __webpack_require__(/*! ./starter */ "./resources/js/starter.js");
 
 /***/ }),
 
-/***/ "./resources/js/plugins/jquery.selectbox.js":
-/*!**************************************************!*\
-  !*** ./resources/js/plugins/jquery.selectbox.js ***!
-  \**************************************************/
+/***/ "./resources/js/plugins/selectbox/jquery.selectbox.js":
+/*!************************************************************!*\
+  !*** ./resources/js/plugins/selectbox/jquery.selectbox.js ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -42485,8 +42485,7 @@ var starter = {
           new parallax_js__WEBPACK_IMPORTED_MODULE_1___default.a(scene);
         }
       }
-    },
-    baner: function baner() {}
+    }
   },
   lightslider: {
     _var: {
@@ -42494,8 +42493,9 @@ var starter = {
       reviews: false
     },
     hero: function hero() {
-      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()("#homeHero,#homeHeroRwd").length > 0) {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()("#homeHero,#homeHeroRwd").lightSlider({
+      var slider = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#homeHero,#homeHeroRwd");
+      if (slider.length > 0) {
+        slider.lightSlider({
           item: 1,
           slideMargin: 0,
           speed: 1000,
@@ -42507,15 +42507,16 @@ var starter = {
           thumbMargin: 5,
           swipeThreshold: 40,
           responsive: [],
-          onSliderLoad: function onSliderLoad(el) {
+          onSliderLoad: function onSliderLoad() {
             starter.parallax.homehero();
           }
         });
       }
     },
     quiz: function quiz() {
-      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()("#test #quiz").length > 0) {
-        starter.lightslider._var.quiz = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#test #quiz").lightSlider({
+      var slider = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#test #quiz");
+      if (slider.length > 0) {
+        starter.lightslider._var.quiz = slider.lightSlider({
           item: 1,
           slideMargin: 0,
           mode: "fade",
@@ -42534,8 +42535,9 @@ var starter = {
       }
     },
     reviews: function reviews() {
-      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()("#reviews #reviewsSlider").length > 0) {
-        starter.lightslider._var.reviews = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#reviews #reviewsSlider").lightSlider({
+      var slider = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#reviews #reviewsSlider");
+      if (slider.length > 0) {
+        starter.lightslider._var.reviews = slider.lightSlider({
           item: 1,
           controls: false,
           adaptiveHeight: true,
@@ -42550,9 +42552,10 @@ var starter = {
   },
   selectbox: {
     init: function init() {
-      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()("#comparison select").length > 0) {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()("#comparison select").selectbox({
-          onChange: function onChange(target, value, text) {
+      var select = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#comparison select");
+      if (select.length > 0) {
+        select.selectbox({
+          onChange: function onChange(target) {
             jquery__WEBPACK_IMPORTED_MODULE_0___default()('#comparisonMobile .d-block').addClass('d-none').removeClass('d-block');
             jquery__WEBPACK_IMPORTED_MODULE_0___default()('#comparisonMobile .' + target).addClass('d-block').removeClass('d-none');
           },
