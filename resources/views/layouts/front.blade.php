@@ -6,8 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-    <meta name="description" content="{{ config('app.name', 'Laravel') }}"/>
+    @isset($metaTitle)
+        <title>{{$metaTitle}}</title>
+    @else
+        <title>{{ config('app.name', 'Laravel') }}</title>
+    @endisset
+
+    @isset($metaDescription)
+        <meta name="description" content="{{ $metaDescription }}"/>
+    @else
+        <meta name="description" content="{{ config('app.name', 'Laravel') }}"/>
+    @endisset
+
     <meta name="keywords" content="{{ config('app.name', 'Laravel') }}"/>
 
     <!--Facebook Like Button OpenGraph Settings Start-->
