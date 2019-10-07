@@ -11,8 +11,11 @@
 |
 */
 
+use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ThxController;
 
 Auth::routes();
 
@@ -21,6 +24,7 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('front.home');
 Route::get('/zelazka', [HomeController::class, 'index'])->name('front.home.irons');
 Route::get('/kontakt', [HomeController::class, 'index'])->name('front.home.contact');
+Route::post('/kontakt/wyslij', [ContactController::class, 'send'])->name('front.contact.send');
 Route::get('/produkty', [HomeController::class, 'index'])->name('front.home.products');
 Route::get('/wybierz-gladko', [HomeController::class, 'index'])->name('front.home.quiz');
 Route::get('/satysfakcja-gwarantowana', [HomeController::class, 'index'])->name('front.home.satisfaction');
@@ -31,4 +35,7 @@ Route::get('/pearl-glide-rose', [ProductController::class, 'pearlGlideRose'])->n
 Route::get('/steam-genie', [ProductController::class, 'steamGenie'])->name('front.product.sg');
 Route::get('/cordless-one-temperature', [ProductController::class, 'cordlessOneTemperature'])->name('front.product.cot');
 Route::get('/copper-express', [ProductController::class, 'copperExpress'])->name('front.product.cx');
+Route::get('/formularz', [ApplicationController::class, 'form'])->name('front.application.form');
+Route::post('/formularz/zapisz', [ApplicationController::class, 'store'])->name('front.application.save');
+Route::get('/formularz/podziekowania', [ThxController::class, 'form'])->name('front.thx.form');
 
