@@ -25,7 +25,7 @@
         </div>
         <div class="row form text-center">
             <div class="col-12 text-center">
-                <a href="/formularz/" class="cta-button py--10 px--60 d-inline-block">WYPEŁNIJ FORMULARZ ZWROTU</a>
+                <a href="{{ route('front.application.form') }}" class="cta-button py--10 px--60 d-inline-block">WYPEŁNIJ FORMULARZ ZWROTU</a>
             </div>
         </div>
     </div>

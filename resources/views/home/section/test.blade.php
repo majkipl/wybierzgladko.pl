@@ -20,7 +20,7 @@
                                     <h2 class="text-uppercase mb--30">POWER STEAM ULTRA</h2>
                                     <p class="mb--40">Wygląda na to, że potrzebujesz niezawodnego urządzenia, które poradzi sobie w wyścigu z czasem i trudnymi materiałami. Najlepszym wyborem będzie Power Steam Ultra. To żelazko to duża moc w bardzo dobrej cenie.</p>
 
-                                    <a href="/power-steam-ultra/" class="cta-button py--10 px--20 mx--15 ml--0 mb--15 mb-sm--0 d-inline-block">więcej informacji</a>
+                                    <a href="{{ route('front.product.psu') }}" class="cta-button py--10 px--20 mx--15 ml--0 mb--15 mb-sm--0 d-inline-block">więcej informacji</a>
                                     <a href="#" class="cta-button py--10 px--20 mx-sm--15 d-inline-block popup-open" data-popup="psu">kup teraz</a>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@
                                     <h2 class="text-uppercase mb--30">ONE TEMPERATURE</h2>
                                     <p class="mb--40">Żelazko, które idealnie spełni Twoje potrzeby, to One Temperature. Dzięki niemu szybko i sprawnie wyprasujesz różne materiały, od jedwabiu po jeans, bez potrzeby regulacji temperatury i bez ryzyka zniszczenia tkanin.</p>
 
-                                    <a href="/one-temperature/" class="cta-button py--10 px--20 mx--15 ml--0 mb--15 mb-sm--0 d-inline-block">więcej informacji</a>
+                                    <a href="{{ route('front.product.ot') }}" class="cta-button py--10 px--20 mx--15 ml--0 mb--15 mb-sm--0 d-inline-block">więcej informacji</a>
                                     <a href="#" class="cta-button py--10 px--20 mx-sm--15 d-inline-block popup-open" data-popup="ot">kup teraz</a>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@
                                     <h2 class="text-uppercase mb--30">IMPACT</h2>
                                     <p class="mb--40">Wygląda na to, że potrzebujesz niezawodnego urządzenia do zadań specjalnych! Najlepszym wyborem będzie dla Ciebie funkcjonalne i odporne na upadki żelazko Impact.</p>
 
-                                    <a href="/impact/" class="cta-button py--10 px--20 mx--15 ml--0 mb--15 mb-sm--0 d-inline-block">więcej informacji</a>
+                                    <a href="{{ route('front.product.i') }}" class="cta-button py--10 px--20 mx--15 ml--0 mb--15 mb-sm--0 d-inline-block">więcej informacji</a>
                                     <a href="#" class="cta-button py--10 px--20 mx-sm--15 d-inline-block popup-open" data-popup="i">kup teraz</a>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@
                                     <h2 class="text-uppercase mb--30">STEAM GENIE</h2>
                                     <p class="mb--40">Do Twojego stylu prasowania idealnie sprawdzi się Ręczny Generator Pary Steam Genie. Dzięki niemu prasowanie stanie się szybkie i przyjemne. I to bez rozkładania deski!</p>
 
-                                    <a href="/steam-genie/" class="cta-button py--10 px--20 mx--15 ml--0 mb--15 mb-sm--0 d-inline-block">więcej informacji</a>
+                                    <a href="{{ route('front.product.sg') }}" class="cta-button py--10 px--20 mx--15 ml--0 mb--15 mb-sm--0 d-inline-block">więcej informacji</a>
                                     <a href="#" class="cta-button py--10 px--20 mx-sm--15 d-inline-block popup-open" data-popup="sg">kup teraz</a>
                                 </div>
                             </div>

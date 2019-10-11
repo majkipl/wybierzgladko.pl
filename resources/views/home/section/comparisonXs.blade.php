@@ -266,25 +266,25 @@
         <div class="col-4 text-left p--15">
         </div>
         <div class="col-8 text-center p--15 d-block power-steam-ultra select">
-            <a href="/power-steam-ultra/" class="cta-button py--10 px--10 w--100 d-inline-block">więcej informacji</a>
+            <a href="{{ route('front.product.psu') }}" class="cta-button py--10 px--10 w--100 d-inline-block">więcej informacji</a>
         </div>
         <div class="col-8 text-center p--15 d-none one-temperature">
-            <a href="/one-temperature/" class="cta-button py--10 px--10 w--100 d-inline-block">więcej informacji</a>
+            <a href="{{ route('front.product.ot') }}" class="cta-button py--10 px--10 w--100 d-inline-block">więcej informacji</a>
         </div>
         <div class="col-8 text-center p--15 d-none impact">
-            <a href="/impact/" class="cta-button py--10 px--10 w--100 d-inline-block">więcej informacji</a>
+            <a href="{{ route('front.product.i') }}" class="cta-button py--10 px--10 w--100 d-inline-block">więcej informacji</a>
         </div>
         <div class="col-8 text-center p--15 d-none pearl-glide-rose">
-            <a href="/pearl-glide-rose/" class="cta-button py--10 px--10 w--100 d-inline-block">więcej informacji</a>
+            <a href="{{ route('front.product.pgr') }}" class="cta-button py--10 px--10 w--100 d-inline-block">więcej informacji</a>
         </div>
         <div class="col-8 text-center p--15 d-none steam-genie">
-            <a href="/steam-genie/" class="cta-button py--10 px--10 w--100 d-inline-block">więcej informacji</a>
+            <a href="{{ route('front.product.sg') }}" class="cta-button py--10 px--10 w--100 d-inline-block">więcej informacji</a>
         </div>
         <div class="col-8 text-center p--15 d-none copper-express">
-            <a href="/copper-express/" class="cta-button py--10 px--10 w--100 d-inline-block">więcej informacji</a>
+            <a href="{{ route('front.product.cx') }}" class="cta-button py--10 px--10 w--100 d-inline-block">więcej informacji</a>
         </div>
         <div class="col-8 text-center p--15 d-none cordless-one-temperature">
-            <a href="/cordless-one-temperature/" class="cta-button py--10 px--10 w--100 d-inline-block">więcej informacji</a>
+            <a href="{{ route('front.product.cot') }}" class="cta-button py--10 px--10 w--100 d-inline-block">więcej informacji</a>
         </div>
     </div>
 

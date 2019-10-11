@@ -112,7 +112,7 @@
                         <!--dowiedz się więcej-->
                         <div data-depth="0.3" class="l11">
                             @if($isHome)
-                                <a href="/power-steam-ultra/" class="cta-button-reverse py--10 px--60">DOWIEDZ SIĘ
+                                <a href="{{ route('front.product.psu') }}" class="cta-button-reverse py--10 px--60">DOWIEDZ SIĘ
                                     WIĘCEJ</a>
                             @else
                                 <a href="#whereBuy" class="cta-button-reverse py--10 px--60 buy scroll-to">KUP TERAZ</a>
@@ -173,7 +173,7 @@
                         <!--dowiedz się więcej-->
                         <div data-depth="0.3" class="l11">
                             @if($isHome)
-                                <a href="/one-temperature/" class="cta-button-reverse py--10 px--60">DOWIEDZ SIĘ
+                                <a href="{{ route('front.product.ot') }}" class="cta-button-reverse py--10 px--60">DOWIEDZ SIĘ
                                     WIĘCEJ</a>
                             @else
                                 <a href="#whereBuy" class="cta-button-reverse py--10 px--60 buy scroll-to">KUP TERAZ</a>
@@ -234,7 +234,7 @@
                         <!--dowiedz się więcej-->
                         <div data-depth="0.3" class="l11">
                             @if($isHome)
-                                <a href="/impact/" class="cta-button-reverse py--10 px--60">DOWIEDZ SIĘ WIĘCEJ</a>
+                                <a href="{{ route('front.product.i') }}" class="cta-button-reverse py--10 px--60">DOWIEDZ SIĘ WIĘCEJ</a>
                             @else
                                 <a href="#whereBuy" class="cta-button-reverse py--10 px--60 buy scroll-to">KUP TERAZ</a>
                             @endif
@@ -294,7 +294,7 @@
                         <!--dowiedz się więcej-->
                         <div data-depth="0.3" class="l11">
                             @if($isHome)
-                                <a href="/pearl-glide-rose/" class="cta-button-reverse py--10 px--60">DOWIEDZ SIĘ
+                                <a href="{{ route('front.product.pgr') }}" class="cta-button-reverse py--10 px--60">DOWIEDZ SIĘ
                                     WIĘCEJ</a>
                             @else
                                 <a href="#whereBuy" class="cta-button-reverse py--10 px--60 buy scroll-to">KUP TERAZ</a>
@@ -357,7 +357,7 @@ bez deski</span>
                         <!--dowiedz się więcej-->
                         <div data-depth="0.3" class="l11">
                             @if($isHome)
-                                <a href="/steam-genie/" class="cta-button-reverse py--10 px--60">DOWIEDZ SIĘ WIĘCEJ</a>
+                                <a href="{{ route('front.product.sg') }}" class="cta-button-reverse py--10 px--60">DOWIEDZ SIĘ WIĘCEJ</a>
                             @else
                                 <a href="#whereBuy" class="cta-button-reverse py--10 px--60 buy scroll-to">KUP TERAZ</a>
                             @endif
@@ -418,7 +418,7 @@ bez deski</span>
                         <!--dowiedz się więcej-->
                         <div data-depth="0.3" class="l11">
                             @if($isHome)
-                                <a href="/cordless-one-temperature/" class="cta-button-reverse py--10 px--60">DOWIEDZ
+                                <a href="{{ route('front.product.cot') }}" class="cta-button-reverse py--10 px--60">DOWIEDZ
                                     SIĘ
                                     WIĘCEJ</a>
                             @else
@@ -480,7 +480,7 @@ bez deski</span>
                         <!--dowiedz się więcej-->
                         <div data-depth="0.3" class="l11">
                             @if($isHome)
-                                <a href="/copper-express/" class="cta-button-reverse py--10 px--60">DOWIEDZ SIĘ
+                                <a href="{{ route('front.product.cx') }}" class="cta-button-reverse py--10 px--60">DOWIEDZ SIĘ
                                     WIĘCEJ</a>
                             @else
                                 <a href="#whereBuy" class="cta-button-reverse py--10 px--60 buy scroll-to">KUP TERAZ</a>

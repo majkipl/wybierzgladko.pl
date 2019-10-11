@@ -10,7 +10,7 @@
         </div>
         <div class="row text-center">
             <div class="col-12 col-xl-11 text-right">
-                <a href="/serwis/" class="cta-button py--10 px--60 d-inline-block">DOWIEDZ SIĘ WIĘCEJ</a>
+                <a href="/gwarancja/" class="cta-button py--10 px--60 d-inline-block">DOWIEDZ SIĘ WIĘCEJ</a>
             </div>
         </div>
     </div>

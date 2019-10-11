@@ -95,7 +95,7 @@
             <p>TAK</p>
         </div>
         <div class="col-12 col-md-1 d-flex flex-column justify-content-center align-items-center pt--15 pb--15 mt--0 border-left border-white buttons">
-            <a href="/one-temperature/" class="cta-button py--10 px--5 my--5 w--100 d-inline-block">więcej</a>
+            <a href="{{ route('front.product.ot') }}" class="cta-button py--10 px--5 my--5 w--100 d-inline-block">więcej</a>
             <a href="#" class="cta-button py--10 px--5 my--5 w--100 d-inline-block popup-open" data-popup="ot">kup teraz</a>
         </div>
     </div>
@@ -130,7 +130,7 @@
             <p>TAK</p>
         </div>
         <div class="col-12 col-md-1 d-flex flex-column justify-content-center align-items-center pt--15 pb--15 mt--0 border-left border-white buttons">
-            <a href="/impact/" class="cta-button py--10 px--5 my--5 w--100 d-inline-block">więcej</a>
+            <a href="{{ route('front.product.i') }}" class="cta-button py--10 px--5 my--5 w--100 d-inline-block">więcej</a>
             <a href="#" class="cta-button py--10 px--5 my--5 w--100 d-inline-block popup-open" data-popup="i">kup teraz</a>
         </div>
     </div>
@@ -165,7 +165,7 @@
             <p>TAK</p>
         </div>
         <div class="col-12 col-md-1 d-flex flex-column justify-content-center align-items-center pt--15 pb--15 mt--0 border-left border-white buttons">
-            <a href="/pearl-glide-rose/" class="cta-button py--10 px--5 my--5 w--100 d-inline-block">więcej</a>
+            <a href="{{ route('front.product.pgr') }}" class="cta-button py--10 px--5 my--5 w--100 d-inline-block">więcej</a>
             <a href="#" class="cta-button py--10 px--5 my--5 w--100 d-inline-block popup-open" data-popup="pgr">kup teraz</a>
         </div>
     </div>
@@ -200,7 +200,7 @@
             <p>TAK</p>
         </div>
         <div class="col-12 col-md-1 d-flex flex-column justify-content-center align-items-center pt--15 pb--15 mt--0 border-left border-white buttons">
-            <a href="/steam-genie/" class="cta-button py--10 px--5 my--5 w--100 d-inline-block">więcej</a>
+            <a href="{{ route('front.product.sg') }}" class="cta-button py--10 px--5 my--5 w--100 d-inline-block">więcej</a>
             <a href="#" class="cta-button py--10 px--5 my--5 w--100 d-inline-block popup-open" data-popup="sg">kup teraz</a>
         </div>
     </div>
@@ -235,7 +235,7 @@
             <p>TAK</p>
         </div>
         <div class="col-12 col-md-1 d-flex flex-column justify-content-center align-items-center pt--15 pb--15 mt--0 border-left border-white buttons">
-            <a href="/copper-express/" class="cta-button py--10 px--5 my--5 w--100 d-inline-block">więcej</a>
+            <a href="{{ route('front.product.cx') }}" class="cta-button py--10 px--5 my--5 w--100 d-inline-block">więcej</a>
             <a href="#" class="cta-button py--10 px--5 my--5 w--100 d-inline-block popup-open" data-popup="cx">kup teraz</a>
         </div>
     </div>
@@ -270,7 +270,7 @@
             <p>TAK</p>
         </div>
         <div class="col-12 col-md-1 d-flex flex-column justify-content-center align-items-center pt--15 pb--15 mt--0 border-left border-white buttons">
-            <a href="/cordless-one-temperature/" class="cta-button py--10 px--5 my--5 w--100 d-inline-block">więcej</a>
+            <a href="{{ route('front.product.cot') }}" class="cta-button py--10 px--5 my--5 w--100 d-inline-block">więcej</a>
             <a href="#" class="cta-button py--10 px--5 my--5 w--100 d-inline-block popup-open" data-popup="cot">kup teraz</a>
         </div>
     </div>
