@@ -42355,6 +42355,14 @@ var starter = {
         jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('form').submit();
         return false;
       });
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '#reviews .reviews-slider-prev', function () {
+        starter.lightslider._var.reviews.goToPrevSlide();
+        return false;
+      });
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '#reviews .reviews-slider-next', function () {
+        starter.lightslider._var.reviews.goToNextSlide();
+        return false;
+      });
     },
     onChange: function onChange() {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('change', '.input, .textarea, .checkbox, .file', function () {

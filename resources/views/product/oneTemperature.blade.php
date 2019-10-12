@@ -159,53 +159,7 @@
 
     @include('product.section.whereBuy', ['productSlug' => "ot"])
     @include('product.section.exploreOtherProduct', ['current' => 'ot'])
-
-    <section class="reviews my--70 bg-white wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" id="reviews">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12 mb--30">
-                    <h2 class="text-uppercase mt--50 py--60">opinie klientów</h2>
-                </div>
-            </div>
-            <div class="row row-eq-height text-center mb--70">
-                <div class="col-1 col-sm-1 col-lg-2 reviews-slider-prev text-right px-0 px-md--15">
-                    <img
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAhFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8qm6wAAAAK3RSTlMAAQIECAoLDQ4PEBMUFxkaGxweJicpKzx7i5qbnaatr7DFztna3ubt9ff9UbhyhgAAAPZJREFUeNrtzslOAgEYBOEeVFxQQcV9BTfG//3fTy6GwXjQg1PGVJ87qS/5rW0MQu5wVnU75Ppnb7Xc64jtc4KPPiVY9RlBt08I1vv9Cz73l4Jdtl81h/tVB3C/pnC/tuH+Jdy/a+D+wL59+/btE/17+/bt27dvH+g/2Ldv3759+/bt27f/D/vHcD9PcH8H7mfva8BV0xcgL7TgtGjBuQIFChQoUKBAgQIFCn4kuFagQIECBQr+lOBGgQIFChQo6OwitGCLFpwEFozDCh6boILFfkIKFuOEFPTfXxe0QL8rYPorQTtJSEF7FGzT56rZKOSGm9+6vQOB+9uGFj/W7gAAAABJRU5ErkJggg=="
-                        alt="prev" class="prev"/>
-                </div>
-                <div class="col-10 col-sm-10 col-lg-8">
-                    <ul id="reviewsSlider" class="text-left">
-                        <li>
-                            <p class="pb--20 px-sm--30">Mimo lekkiej wagi żelazko prasuje bardzo dobrze różne tkaniny.
-                                Jedna temperatura pozwala usprawnić cały proces prasowania. Duży zbiornik na wodę
-                                zapobiega odrywaniu się od prasowania ubrań. Ogromny plus za funkcję automatycznego
-                                wyłączania się. Jeśli cenisz sobie czas i nienaganny wygląd - to produkt dla Ciebie.</p>
-                        </li>
-                        <li>
-                            <p class="pb--20 px-sm--30">Jeśli nienawidzisz prasować. Jeśli ta czynność to po prostu
-                                konieczny obowiązek do wykonania w domu - to żelazko jest dla Ciebie! Prasujesz każdy
-                                materiał przy ustawionej jednej temperaturze, co jest naprawdę wygodne dla osoby, która
-                                nigdy nie wie jaką temperaturę wybrać, aby nie spalić koszuli. Ja zawsze miałam z tym
-                                problem, czasami prasując lekką, jedwabną bluzeczkę, mimo niskiej temperatury paliła się
-                                ;( . Tu nie ma z tym problemu.</p>
-                        </li>
-                        <li>
-                            <p class="pb--20 px-sm--30">Największym plusem tego żelazka jest oczywiście fakt, że nie
-                                ustawiasz temperatury. Zapewne nie raz zastanawiałaś się czy aby nie jest żelazko za
-                                gorące i czy nie przypali ulubionej sukienki / bluzki. Fajnie się prasuje, ceramiczna
-                                stopa sunie po materiale aż miło. Funkcja samo wyłączenia moje wybawienie :) szczerze
-                                polecam, nie jest drogie a świetne.</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-1 col-sm-1 col-lg-2 reviews-slider-next text-left px-0 px-md--15">
-                    <img
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAilBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAggvAAAALXRSTlMAAQIFBwgKCwwNDxARExgbHCIsMzo7PFBndYWGiImLjJidubzIz+Lk5ujr7fMBvYaJAAAA+UlEQVR42u3bV27CYBBF4TGmOaGXECAJvTP73x5CSMgYkHiJr8R/7gLmOxsYsxdWiE254tR91db51bWf15f5G7/sS+yLClK+pCBJ+4KCZOuuLChn/bwLFu7Sgk93bUHLxQVFVxcM1QXRjAIKKKCAAgoooIACCiiggAIKKKCAAgoooIACCih4k4KOumAfqQsaeQXY6HFAU+wfC1rfe2J/gB+EP8bHD9j/wcfHx8cP0v/Fx8eX+X/4+AH7E3x8fHz8IP1vsR+L/WePTrn5VhP7Zkuxbx8HrW9WP2j9u4Lc/UyBwL8pkPipApF/LZD5Zsncfdc15UqV/7t9AlBN8PZhAttoAAAAAElFTkSuQmCC"
-                        alt="next" class="next"/>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('product.section.reviews')
 
     @include('home.section.hesitate')
 

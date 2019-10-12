@@ -117,8 +117,7 @@
 
     @include('product.section.whereBuy', ['productSlug' => "pgr"])
     @include('product.section.exploreOtherProduct', ['current' => 'pgr'])
-
-    {{--    <section class="reviews my--70 bg-white wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" id="reviews"></section>--}}
+    @include('product.section.reviews')
 
     @include('home.section.hesitate')
 
