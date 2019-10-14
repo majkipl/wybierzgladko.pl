@@ -170,6 +170,16 @@ const starter = {
                 $(this).closest('form').submit();
                 return false;
             });
+
+            $(document).on('click', '#reviews .reviews-slider-prev', function(){
+                starter.lightslider._var.reviews.goToPrevSlide();
+                return false;
+            });
+
+            $(document).on('click', '#reviews .reviews-slider-next', function(){
+                starter.lightslider._var.reviews.goToNextSlide();
+                return false;
+            });
         },
 
         onChange: function () {

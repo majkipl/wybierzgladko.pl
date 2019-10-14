@@ -14,8 +14,10 @@
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Panel\ReviewsController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ThxController;
+use App\Http\Controllers\WarrantyController;
 
 Auth::routes();
 
@@ -38,4 +40,20 @@ Route::get('/copper-express', [ProductController::class, 'copperExpress'])->name
 Route::get('/formularz', [ApplicationController::class, 'form'])->name('front.application.form');
 Route::post('/formularz/zapisz', [ApplicationController::class, 'store'])->name('front.application.save');
 Route::get('/formularz/podziekowania', [ThxController::class, 'form'])->name('front.thx.form');
+Route::get('/gwarancja', array(WarrantyController::class, 'index'))->name('front.warranty');
 
+/* BACKEND */
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/panel', [\App\Http\Controllers\Panel\HomeController::class, 'index'])->name('back.home');
+
+    Route::middleware(['can:isAdmin'])->group(function () {
+        Route::get('/panel/zgloszenie', [\App\Http\Controllers\Panel\ApplicationController::class, 'index'])->name('back.application');
+        Route::get('/panel/zgloszenie/{application}', [\App\Http\Controllers\Panel\ApplicationController::class, 'show'])->name('back.application.show');
+
+        Route::get('/panel/opinie', [ReviewsController::class, 'index'])->name('back.review');
+        Route::get('/panel/opinie/dodaj', [ReviewsController::class, 'create'])->name('back.review.create');
+        Route::get('/panel/opinie/zmien/{review}', [ReviewsController::class, 'edit'])->name('back.review.edit');
+        Route::get('/panel/opinie/{review}', [ReviewsController::class, 'show'])->name('back.review.show');
+    });
+});
