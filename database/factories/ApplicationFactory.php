@@ -16,7 +16,7 @@ $factory->define(Application::class, function (Faker $faker) {
         'city' => $faker->city,
         'zip' => $faker->numberBetween(10, 99) . '-' . $faker->numberBetween(100, 999),
         'img_receipt' => 'receipts/z8cQ1QnxrY6BlXkKZeTNN5WFzciIzVuRFDmfWEvu.jpg',
-        'iban' => $faker->numberBetween(10, 99) . $faker->numberBetween(1000, 9999) . $faker->numberBetween(1000, 9999) . $faker->numberBetween(1000, 9999) . $faker->numberBetween(1000, 9999) . $faker->numberBetween(1000, 9999) . $faker->numberBetween(1000, 9999),
+        'iban' => $faker->numerify('##########################'),
         'reason' => $faker->text(4000),
         'legal_1' => true,
         'legal_2' => true,

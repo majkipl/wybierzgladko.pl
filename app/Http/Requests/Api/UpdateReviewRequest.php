@@ -26,7 +26,7 @@ class UpdateReviewRequest extends FormRequest
     {
         $products = implode(',', Product::ALL);
         return [
-            'content' => 'bail|required|string|max:128',
+            'content' => 'bail|required|string|max:4096',
             'product' => 'bail|required|in:' . $products,
             'id' => 'required|integer|exists:reviews,id'
         ];

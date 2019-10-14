@@ -38,6 +38,7 @@ class StoreApplicationRequest extends FormRequest
             'city' => 'bail|required|string|min:2|max:64',
             'img_receipt' => 'bail|required|file|mimes:jpeg,jpg,png|max:4096',
             'iban' => [
+                'bail',
                 'required',
                 'regex:/^\d{26}$/'
             ],
