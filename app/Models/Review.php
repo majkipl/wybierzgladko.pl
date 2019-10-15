@@ -5,6 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
 
+/**
+ * @method static findOrFail(mixed $input)
+ * @method static search($search, $searchable)
+ * @method static where(string $string, $product)
+ * @method static insert(array $data)
+ */
 class Review extends Model
 {
     protected $fillable = ['id', 'content', 'product'];

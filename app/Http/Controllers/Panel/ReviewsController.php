@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Panel;
 use App\Enums\Product;
 use App\Http\Controllers\Controller;
 use App\Models\Review;
-use Illuminate\Http\Request;
 
 class ReviewsController extends Controller
 {

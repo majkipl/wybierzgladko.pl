@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Enums\Product;
 use App\Models\Review;
-use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {

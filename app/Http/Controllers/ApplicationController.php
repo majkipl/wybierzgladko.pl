@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreApplicationRequest;
 use App\Services\ApplicationService;
 use Exception;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 class ApplicationController extends Controller

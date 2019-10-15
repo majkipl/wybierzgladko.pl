@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Panel;
 
 use App\Http\Controllers\Controller;
 use App\Models\Application;
-use Illuminate\Http\Request;
 
 class ApplicationController extends Controller
 {

@@ -10,7 +10,6 @@ use App\Models\Review;
 use App\Traits\ApiRequestParametersTrait;
 use Exception;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
@@ -76,7 +75,7 @@ class ReviewController extends Controller
         }
     }
 
-    public function update(UpdateReviewRequest $request)
+    public function update(UpdateReviewRequest $request): JsonResponse
     {
         DB::beginTransaction();
 
@@ -121,17 +120,22 @@ class ReviewController extends Controller
         }
     }
 
+    /**
+     * @param Review $review
+     * @return JsonResponse
+     */
     public function delete(Review $review): JsonResponse
     {
         DB::beginTransaction();
 
         try {
+            $product = $review->product;
             $review->delete();
 
             DB::commit();
 
             Cache::forget('reviews');
-            Cache::forget('reviews_' . $review->product);
+            Cache::forget('reviews_' . $product);
 
             return response()->json(
                 [

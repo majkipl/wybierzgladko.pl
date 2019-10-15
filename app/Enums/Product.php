@@ -21,11 +21,11 @@ class Product
         self::PSU,
         self::SG
     ];
-    public static function toSelect()
+    public static function toSelect(): array
     {
         $temp = [];
 
-        foreach(self::ALL as $key => $value) {
+        foreach(self::ALL as $value) {
             $tmp = [];
             $tmp['id'] = $value;
             $tmp['name'] = $value;
