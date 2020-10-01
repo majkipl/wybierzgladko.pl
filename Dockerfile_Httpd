@@ -1,11 +1,11 @@
-FROM php:7.3.33-apache
+FROM php:7.4-apache
 LABEL authors=${DOCKER_AUTHOR}
 
 RUN apt-get update -y
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -y nodejs libzip-dev zip unzip
 
-RUN docker-php-ext-configure zip --with-libzip
+RUN docker-php-ext-configure zip
 RUN docker-php-ext-install pdo pdo_mysql bcmath zip
 
 WORKDIR /var/www/html
@@ -15,7 +15,7 @@ COPY docker/php/000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY docker/php/php.ini /usr/local/etc/php/php.ini
 COPY docker/php/php.ini /usr/local/etc/php/php.ini-development
 COPY docker/php/php.ini /usr/local/etc/php/php.ini-production
-COPY --from=composer:1.9.0 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:1.10.13 /usr/bin/composer /usr/bin/composer
 
 RUN chown -R www-data:www-data /var/www/html
 
