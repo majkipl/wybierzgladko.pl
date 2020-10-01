@@ -8,7 +8,7 @@ chmod -R 777 /var/www/html/storage
 composer install --no-interaction --no-progress
 
 npm install -g n
-n 12.13.0
+n 12.19.0
 npm install
 npm run build
 
@@ -17,6 +17,7 @@ php artisan migrate:fresh --seed    # robimy migracje wraz z seed'ami #
 php artisan cache:clear             # czyścimy cache
 php artisan config:clear            # czyścimy konfiguracje
 php artisan route:clear             # czyścimy routing
+php artisan jwt:secret
 
 cd public
 ln -sf ../storage/app/public/ storage
