@@ -44,7 +44,7 @@ Route::get('/gwarancja', array(WarrantyController::class, 'index'))->name('front
 
 /* BACKEND */
 
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth', 'verified', 'jwt.access'])->group(function () {
     Route::get('/panel', [\App\Http\Controllers\Panel\HomeController::class, 'index'])->name('back.home');
 
     Route::middleware(['can:isAdmin'])->group(function () {

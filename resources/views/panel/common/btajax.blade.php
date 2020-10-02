@@ -1,7 +1,7 @@
 <script>
     function btAjax(params) {
         const headers = {
-            'Authorization': 'Bearer ' + '{{ Auth::user()->api_token }}'
+            'Authorization': 'Bearer ' + token
         };
 
         const urlWithParams = params.url + '?' + $.param(params.data);

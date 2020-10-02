@@ -26,12 +26,11 @@
 <body class="panel">
 <div id="app">
     @include('panel.common.navbar')
+    @include('panel.common.token')
 
     <main class="padding-top-4 padding-bottom-4">
         @yield('content')
     </main>
-
-    @include('panel.common.token')
 </div>
 
 <script src="https://unpkg.com/jquery@3.6.4/dist/jquery.min.js"></script>
@@ -47,6 +46,9 @@
     src="https://unpkg.com/bootstrap-table@1.21.4/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
 <script src="https://unpkg.com/moment@2.29.4/min/moment.min.js"></script>
 <script src="https://unpkg.com/axios@0.16.2/dist/axios.min.js"></script>
+<script src="https://unpkg.com/js-cookie@2.2.1/src/js.cookie.js"></script>
+
+
 <script src="{{ asset('js/backend.js') }}" defer></script>
 </body>
 </html>
