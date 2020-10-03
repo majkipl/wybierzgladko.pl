@@ -7,6 +7,7 @@ use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Throwable;
 
 class Handler extends ExceptionHandler
 {
@@ -37,7 +38,7 @@ class Handler extends ExceptionHandler
      *
      * @throws Exception
      */
-    public function report(Exception $exception)
+    public function report(Throwable $exception)
     {
         parent::report($exception);
     }
@@ -51,7 +52,7 @@ class Handler extends ExceptionHandler
      *
      * @throws Exception
      */
-    public function render($request, Exception $exception): Response
+    public function render($request, Throwable $exception): Response
     {
         if ($exception instanceof NotFoundHttpException && !$request->expectsJson()) {
             return response()->view('errors.404', [], 404);
