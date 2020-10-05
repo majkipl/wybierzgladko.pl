@@ -9,6 +9,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\Response;
 use Illuminate\Support\Str;
 use Tests\TestCase;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class ReviewControllerTest extends TestCase
 {
@@ -25,7 +26,7 @@ class ReviewControllerTest extends TestCase
     public function it_response_http_forbidden_if_without_token_for_list_review()
     {
         $response = $this->getJson(route('api.review'));
-        $response->assertStatus(Response::HTTP_FORBIDDEN);
+        $response->assertStatus(Response::HTTP_UNAUTHORIZED);
     }
 
     /** @test */
@@ -40,7 +41,7 @@ class ReviewControllerTest extends TestCase
         ])->getJson(route('api.review') . '?' . http_build_query($queryParams));
 
         $response
-            ->assertStatus(Response::HTTP_FORBIDDEN);
+            ->assertStatus(Response::HTTP_UNAUTHORIZED);
     }
 
     /** @test */
@@ -52,8 +53,10 @@ class ReviewControllerTest extends TestCase
             'searchable' => ['id', 'content', 'product'],
         ];
 
+        $token = JWTAuth::fromUser($this->getUser());
+
         $response = $this->withHeaders([
-            'Authorization' => 'Bearer ' . $this->getUser()->api_token,
+            'Authorization' => 'Bearer ' . $token,
         ])->getJson(route('api.review') . '?' . http_build_query($queryParams));
 
         $response

@@ -9,6 +9,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\Response;
 use Illuminate\Support\Str;
 use Tests\TestCase;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class ApplicationControllerTest extends TestCase
 {
@@ -25,7 +26,7 @@ class ApplicationControllerTest extends TestCase
     public function it_response_http_forbidden_if_without_token_for_list_application()
     {
         $response = $this->getJson(route('api.application'));
-        $response->assertStatus(Response::HTTP_FORBIDDEN);
+        $response->assertStatus(Response::HTTP_UNAUTHORIZED);
     }
 
     /** @test */
@@ -40,7 +41,7 @@ class ApplicationControllerTest extends TestCase
         ])->getJson(route('api.application') . '?' . http_build_query($queryParams));
 
         $response
-            ->assertStatus(Response::HTTP_FORBIDDEN);
+            ->assertStatus(Response::HTTP_UNAUTHORIZED);
     }
 
     /** @test */
@@ -52,8 +53,10 @@ class ApplicationControllerTest extends TestCase
             'searchable' => ['id', 'firstname', 'lastname'],
         ];
 
+        $token = JWTAuth::fromUser($this->getUser());
+
         $response = $this->withHeaders([
-            'Authorization' => 'Bearer ' . $this->getUser()->api_token,
+            'Authorization' => 'Bearer ' . $token,
         ])->getJson(route('api.application') . '?' . http_build_query($queryParams));
 
         $response

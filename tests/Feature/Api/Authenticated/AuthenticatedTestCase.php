@@ -5,7 +5,9 @@ namespace Tests\Feature\Api\Authenticated;
 use App\Enums\UserRole;
 use App\Models\User;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Session;
 use Tests\TestCase;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class AuthenticatedTestCase extends TestCase
 {
@@ -20,6 +22,8 @@ class AuthenticatedTestCase extends TestCase
         $this->user = factory(User::class)->create([
             'role' => UserRole::ADMIN
         ]);
+
+        Session::put('token_access', JWTAuth::fromUser($this->user));
 
         $this->actingAs($this->user);
 
