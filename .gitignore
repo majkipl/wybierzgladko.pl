@@ -292,6 +292,7 @@ fabric.properties
 /build/
 
 # End of https://www.toptal.com/developers/gitignore/api/laravel,phpstorm,node,phpunit
+/.idea
 /bootstrap/cache
 /storage/framework/cache
 /storage/framework/sessions
