@@ -1,0 +1,36 @@
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 0 15px;
+    z-index: 999;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+
+    .logo {
+        width: 60%;
+        max-width: 250px;
+
+        img {
+            max-width: 100%;
+        }
+
+        @media (min-width: 576px) {
+            width: 100%;
+        }
+    }
+
+    .dl-menuwrapper {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .dl-menuwrapper .dl-menu {
+        max-height: calc(100vh - 80px);
+        overflow: overlay;
+    }
+}
+
+nav.show-color {
+    background-color: $secondary;
+}

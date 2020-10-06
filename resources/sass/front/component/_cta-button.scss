@@ -1,0 +1,84 @@
+.cta-button {
+    @extend .h6;
+    text-align: center;
+    border-width: 3px;
+    border-style: solid;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+}
+
+.cta-button-primary {
+    @extend .cta-button;
+
+    color: $seven-row;
+    background-color: $quaternary;
+    border-color: $quaternary;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: $seven-row;
+        border-width: 3px;
+        border-style: solid;
+        border-color: $quaternary;
+    }
+}
+
+.cta-button-secondary {
+    @extend .cta-button;
+
+    color: $quaternary;
+    background-color: transparent;
+    border-color: $seven-row;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: $seven-row;
+        border-width: 3px;
+        border-style: solid;
+        border-color: $seven-row;
+    }
+}
+
+.cta-button-tertiary {
+    @extend .cta-button;
+
+    color: $seven-row;
+    background-color: $quaternary;
+    border-color: $quaternary;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: $quaternary;
+        border-width: 3px;
+        border-style: solid;
+        border-color: $quaternary;
+    }
+}
+
+.cta-button-quaternary {
+    @extend .cta-button;
+
+    color: $quaternary;
+    background-color: $seven-row;
+    border-color: $seven-row;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: $seven-row;
+        border-width: 3px;
+        border-style: solid;
+        border-color: $seven-row;
+    }
+}

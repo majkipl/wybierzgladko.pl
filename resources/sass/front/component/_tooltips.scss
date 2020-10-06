@@ -1,0 +1,21 @@
+.tooltip {
+    padding: 0;
+    .arrow {
+        left: 50% !important;
+        transform: translateX(-50%);
+        width: 32px;
+        height: 16px;
+        top: -16px;
+
+        &:before {
+            border-bottom-color: $quaternary;
+            border-width: 0 16px 16px;
+        }
+    }
+    .tooltip-inner {
+        background-color: $quaternary;
+        font-size: 1.3rem;
+        padding: 10px;
+        border-radius: 0;
+    }
+}

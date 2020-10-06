@@ -1,0 +1,51 @@
+footer {
+    background-color: $secondary;
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: flex-start;
+
+        @media (min-width: 768px) {
+            justify-content: flex-end;
+        }
+
+        a {
+            order: 0;
+            align-self: auto;
+            color: $seven-row;
+            cursor: pointer;
+        }
+
+        .socicon-instagram,
+        .socicon-youtube,
+        .socicon-facebook {
+            display: flex;
+            flex: 0 1 auto;
+            background: $seven-row;
+            font-size: 3.2rem;
+            color: $secondary;
+            padding: 10px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease-out;
+
+            &:hover {
+                background-color: $quaternary;
+            }
+        }
+
+        .regulations,
+        .politic {
+            flex: 0 0 100%;
+            font-size: 1.3rem;
+            transition: color 0.3s ease-out;
+
+            &:hover {
+                color: $quaternary;
+            }
+        }
+    }
+}

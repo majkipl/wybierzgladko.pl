@@ -1,0 +1,299 @@
+section#hero {
+    position: relative;
+    background-color: $secondary;
+    color: $seven-row;
+    padding-top: 80px;
+    background-color: #002a5a;
+
+    @media (min-width: 992px) {
+        padding-top: 0;
+        background-color: $secondary;
+    }
+
+    @media (min-width: 1200px) {
+        padding-top: 0;
+    }
+
+    #homeHero {
+        > li {
+            height: 600px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: relative;
+            background-size: contain;
+
+            .desc {
+                font-size: 2.6rem;
+            }
+
+            height: calc(100vw * 400 / 576);
+
+            @media (min-width: 576px) {
+                height: 400px;
+                background-size: auto;
+            }
+
+            @media (min-width: 768px) {
+                height: 500px;
+            }
+
+            @media (min-width: 992px) {
+                height: 768px;
+            }
+
+            .mobile {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+
+        .s1 {
+            background-image: url('/images/slider/xs/kv.jpg');
+
+            @media (min-width: 576px) {
+                background-image: url('/images/slider/sm/kv.jpg');
+            }
+
+            @media (min-width: 768px) {
+                background-image: url('/images/slider/md/kv.jpg');
+            }
+
+            @media (min-width: 992px) {
+                background-image: url('/images/slider/lg/kv.jpg');
+            }
+
+            @media (min-width: 1200px) {
+                background-image: none;
+            }
+
+            .irons {
+                position: absolute;
+                top: 180px;
+                right: 0;
+            }
+
+            .stamp {
+                position: absolute;
+                top: 140px;
+                right: 0;
+            }
+        }
+
+        .s2 {
+            background-image: url('/images/slider/xs/ccs.jpg');
+
+            @media (min-width: 576px) {
+                background-image: url('/images/slider/sm/ccs.jpg');
+            }
+
+            @media (min-width: 768px) {
+                background-image: url('/images/slider/md/ccs.jpg');
+            }
+
+            @media (min-width: 992px) {
+                background-image: url('/images/slider/lg/ccs.jpg');
+            }
+
+            @media (min-width: 1200px) {
+                background-image: url('/images/slider/xl/ccs.jpg');
+            }
+
+            @media (min-width: 1920px) {
+                background-image: url('/images/slider/fhd/ccs.jpg');
+            }
+        }
+
+        .s3 {
+            background-image: url('/images/slider/xs/ce.jpg');
+
+            @media (min-width: 576px) {
+                background-image: url('/images/slider/sm/ce.jpg');
+            }
+
+            @media (min-width: 768px) {
+                background-image: url('/images/slider/md/ce.jpg');
+            }
+
+            @media (min-width: 992px) {
+                background-image: url('/images/slider/lg/ce.jpg');
+            }
+
+            @media (min-width: 1200px) {
+                background-image: url('/images/slider/xl/ce.jpg');
+            }
+
+            @media (min-width: 1920px) {
+                background-image: url('/images/slider/fhd/ce.jpg');
+            }
+        }
+
+        .s4 {
+            background-image: url('/images/slider/xs/cot.jpg');
+
+            @media (min-width: 576px) {
+                background-image: url('/images/slider/sm/cot.jpg');
+            }
+
+            @media (min-width: 768px) {
+                background-image: url('/images/slider/md/cot.jpg');
+            }
+
+            @media (min-width: 992px) {
+                background-image: url('/images/slider/lg/cot.jpg');
+            }
+
+            @media (min-width: 1200px) {
+                background-image: url('/images/slider/xl/cot.jpg');
+            }
+
+            @media (min-width: 1920px) {
+                background-image: url('/images/slider/fhd/cot.jpg');
+            }
+        }
+
+        .s5 {
+            background-image: url('/images/slider/xs/i.jpg');
+
+            @media (min-width: 576px) {
+                background-image: url('/images/slider/sm/i.jpg');
+            }
+
+            @media (min-width: 768px) {
+                background-image: url('/images/slider/md/i.jpg');
+            }
+
+            @media (min-width: 992px) {
+                background-image: url('/images/slider/lg/i.jpg');
+            }
+
+            @media (min-width: 1200px) {
+                background-image: url('/images/slider/xl/i.jpg');
+            }
+
+            @media (min-width: 1920px) {
+                background-image: url('/images/slider/fhd/i.jpg');
+            }
+        }
+
+        .s6 {
+            background-image: url('/images/slider/xs/ot.jpg');
+
+            @media (min-width: 576px) {
+                background-image: url('/images/slider/sm/ot.jpg');
+            }
+
+            @media (min-width: 768px) {
+                background-image: url('/images/slider/md/ot.jpg');
+            }
+
+            @media (min-width: 992px) {
+                background-image: url('/images/slider/lg/ot.jpg');
+            }
+
+            @media (min-width: 1200px) {
+                background-image: url('/images/slider/xl/ot.jpg');
+            }
+
+            @media (min-width: 1920px) {
+                background-image: url('/images/slider/fhd/ot.jpg');
+            }
+        }
+
+        .s7 {
+            background-image: url('/images/slider/xs/pgr.jpg');
+
+            @media (min-width: 576px) {
+                background-image: url('/images/slider/sm/pgr.jpg');
+            }
+
+            @media (min-width: 768px) {
+                background-image: url('/images/slider/md/pgr.jpg');
+            }
+
+            @media (min-width: 992px) {
+                background-image: url('/images/slider/lg/pgr.jpg');
+            }
+
+            @media (min-width: 1200px) {
+                background-image: url('/images/slider/xl/pgr.jpg');
+            }
+
+            @media (min-width: 1920px) {
+                background-image: url('/images/slider/fhd/pgr.jpg');
+            }
+        }
+
+        .s8 {
+            background-image: url('/images/slider/xs/psu.jpg');
+
+            @media (min-width: 576px) {
+                background-image: url('/images/slider/sm/psu.jpg');
+            }
+
+            @media (min-width: 768px) {
+                background-image: url('/images/slider/md/psu.jpg');
+            }
+
+            @media (min-width: 992px) {
+                background-image: url('/images/slider/lg/psu.jpg');
+            }
+
+            @media (min-width: 1200px) {
+                background-image: url('/images/slider/xl/psu.jpg');
+            }
+
+            @media (min-width: 1920px) {
+                background-image: url('/images/slider/fhd/psu.jpg');
+            }
+        }
+
+        .s9 {
+            background-image: url('/images/slider/xs/qss.jpg');
+
+            @media (min-width: 576px) {
+                background-image: url('/images/slider/sm/qss.jpg');
+            }
+
+            @media (min-width: 768px) {
+                background-image: url('/images/slider/md/qss.jpg');
+            }
+
+            @media (min-width: 992px) {
+                background-image: url('/images/slider/lg/qss.jpg');
+            }
+
+            @media (min-width: 1200px) {
+                background-image: url('/images/slider/xl/qss.jpg');
+            }
+
+            @media (min-width: 1920px) {
+                background-image: url('/images/slider/fhd/qss.jpg');
+            }
+        }
+
+        .s10 {
+            background-image: url('/images/slider/xs/sg.jpg');
+
+            @media (min-width: 576px) {
+                background-image: url('/images/slider/sm/sg.jpg');
+            }
+
+            @media (min-width: 768px) {
+                background-image: url('/images/slider/md/sg.jpg');
+            }
+
+            @media (min-width: 992px) {
+                background-image: url('/images/slider/lg/sg.jpg');
+            }
+
+            @media (min-width: 1200px) {
+                background-image: url('/images/slider/xl/sg.jpg');
+            }
+
+            @media (min-width: 1920px) {
+                background-image: url('/images/slider/fhd/sg.jpg');
+            }
+        }
+    }
+}

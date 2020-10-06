@@ -1,6 +1,9 @@
-require('./bootstrap');
+require('./bootstrap')
 
-require('malihu-custom-scrollbar-plugin');
+
+// require('malihu-custom-scrollbar-plugin');
 require('./plugins/selectbox/jquery.selectbox');
+
+require('./plugins/dlmenu/jquery.dlmenu')
 
 require('./starter');

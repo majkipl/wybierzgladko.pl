@@ -1,0 +1,109 @@
+.accent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    span {
+        max-width: calc(100% - 7rem - 15px);
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        width: 15%;
+        max-width: 7rem;
+        height: 2px;
+        background-color: white;
+    }
+
+    &:before {
+        margin-right: 15px;
+    }
+
+    &:after {
+        margin-left: 15px;
+    }
+
+    &.text-primary {
+        &:before,
+        &:after {
+            background-color: $primary;
+        }
+    }
+
+    &.text-secondary {
+        &:before,
+        &:after {
+            background-color: $secondary;
+        }
+    }
+
+    &.text-tertiary {
+        &:before,
+        &:after {
+            background-color: $tertiary;
+        }
+    }
+
+    &.text-quaternary {
+        &:before,
+        &:after {
+            background-color: $quaternary;
+        }
+    }
+
+    &.text-five-row {
+        &:before,
+        &:after {
+            background-color: $five-row;
+        }
+    }
+
+    &.text-six-row {
+        &:before,
+        &:after {
+            background-color: $six-row;
+        }
+    }
+
+    &.text-seven-row {
+        &:before,
+        &:after {
+            background-color: $seven-row;
+        }
+    }
+
+    &.text-left {
+        justify-content: flex-start;
+    }
+
+    &.text-center {
+        justify-content: center;
+    }
+
+    &.text-right {
+        justify-content: flex-end;
+    }
+
+    &-color-transparent {
+        &:before,
+        &:after {
+            background-color: transparent !important;
+        }
+    }
+
+    &-left-none {
+        &:before {
+            display: none;
+        }
+    }
+
+    &-right-none {
+        &:after {
+            display: none;
+        }
+    }
+}

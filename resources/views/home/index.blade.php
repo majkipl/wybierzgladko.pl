@@ -1,11 +1,13 @@
-@extends('layouts.front')
+@extends('layouts.front', ['isHome' => true])
 
 @section('content')
-    @include('home.section.baner', ['isHome' => true])
-    @include('home.section.banerRwd', ['isHome' => true])
-    @include('home.section.test')
-    @include('home.section.comparison')
-    @include('home.section.doYouKnow')
+    @include('home.section.hero')
+    @include('home.section.compare')
+    @include('home.section.know')
     @include('home.section.hesitate')
     @include('home.section.contact')
+    @include('home.section.partners')
+
+    @include('popup.shops')
+    @include('popup.buy')
 @endsection

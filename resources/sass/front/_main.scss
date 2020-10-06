@@ -1,0 +1,209 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 62.5%; //happy rems : 1rem == 10px
+}
+
+body {
+    font-family: $_text;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: $five-row;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h1,
+.h1 {
+    font-size: 5rem;
+    font-family: $_header;
+
+    @media (min-width: 576px) {
+        font-size: 5.25rem;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 5.5rem;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 5.75rem;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 6rem;
+    }
+}
+
+h2,
+.h2 {
+    font-size: 3rem;
+    font-family: $_header;
+
+    @media (min-width: 576px) {
+        font-size: 4.25rem;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 4.5rem;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 4.75rem;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 5rem;
+    }
+}
+
+h3,
+.h3 {
+    font-size: 3rem;
+    font-family: $_header;
+
+    @media (min-width: 576px) {
+        font-size: 3.25rem;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 3.5rem;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 3.75rem;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 4rem;
+    }
+}
+
+h4,
+.h4 {
+    font-size: 2rem;
+    font-family: $_text;
+
+    @media (min-width: 576px) {
+        font-size: 2.75rem;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 3rem;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 3.25rem;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 3.5rem;
+    }
+}
+
+h5,
+.h5 {
+    font-size: 2rem;
+    font-family: $_header;
+
+    @media (min-width: 576px) {
+        font-size: 2.25rem;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 2.5rem;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 2.75rem;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 3rem;
+    }
+}
+
+h6,
+.h6 {
+    font-size: 1.8rem;
+    font-family: $_text;
+
+    @media (min-width: 576px) {
+        font-size: 1.8rem;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 2rem;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 2.2rem;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 2.4rem;
+    }
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: $_text;
+    margin-bottom: 2rem;
+}
+
+em {
+    font-size: 1.4rem;
+    font-family: $_text;
+    margin-bottom: 2rem;
+}
+
+button:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+section a {
+    color: $tertiary;
+    border-bottom: 1px solid $tertiary;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    &.clear {
+        border-bottom: none !important;
+    }
+}
+
+section a:hover {
+    color: $quaternary;
+    border-bottom: 1px dashed $quaternary;
+    text-decoration: none;
+}
+
+.gotham {
+    font-family: $_text;
+}
+
+.aspect {
+    font-family: $_header;
+}

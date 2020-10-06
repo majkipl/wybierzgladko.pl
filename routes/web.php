@@ -26,10 +26,10 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('front.home');
 Route::get('/zelazka', [HomeController::class, 'index'])->name('front.home.irons');
 Route::get('/kontakt', [HomeController::class, 'index'])->name('front.home.contact');
-Route::post('/kontakt/wyslij', [ContactController::class, 'send'])->name('front.contact.send');
-Route::get('/produkty', [HomeController::class, 'index'])->name('front.home.products');
-Route::get('/wybierz-gladko', [HomeController::class, 'index'])->name('front.home.quiz');
-Route::get('/satysfakcja-gwarantowana', [HomeController::class, 'index'])->name('front.home.satisfaction');
+//Route::post('/kontakt/wyslij', [ContactController::class, 'send'])->name('front.contact.send');
+//Route::get('/produkty', [HomeController::class, 'index'])->name('front.home.products');
+//Route::get('/wybierz-gladko', [HomeController::class, 'index'])->name('front.home.quiz');
+//Route::get('/satysfakcja-gwarantowana', [HomeController::class, 'index'])->name('front.home.satisfaction');
 Route::get('/power-steam-ultra', [ProductController::class, 'powerSteamUltra'])->name('front.product.psu');
 Route::get('/one-temperature', [ProductController::class, 'oneTemperature'])->name('front.product.ot');
 Route::get('/impact', [ProductController::class, 'impact'])->name('front.product.i');
@@ -37,9 +37,11 @@ Route::get('/pearl-glide-rose', [ProductController::class, 'pearlGlideRose'])->n
 Route::get('/steam-genie', [ProductController::class, 'steamGenie'])->name('front.product.sg');
 Route::get('/cordless-one-temperature', [ProductController::class, 'cordlessOneTemperature'])->name('front.product.cot');
 Route::get('/copper-express', [ProductController::class, 'copperExpress'])->name('front.product.cx');
+Route::get('/quiet-super-steam', [ProductController::class, 'quietSuperSteam'])->name('front.product.qss');
+Route::get('/colour-control-supreme', [ProductController::class, 'colourControlSupreme'])->name('front.product.ccs');
 Route::get('/formularz', [ApplicationController::class, 'form'])->name('front.application.form');
-Route::post('/formularz/zapisz', [ApplicationController::class, 'store'])->name('front.application.save');
-Route::get('/formularz/podziekowania', [ThxController::class, 'form'])->name('front.thx.form');
+//Route::post('/formularz/zapisz', [ApplicationController::class, 'store'])->name('front.application.save');
+//Route::get('/formularz/podziekowania', [ThxController::class, 'form'])->name('front.thx.form');
 Route::get('/gwarancja', array(WarrantyController::class, 'index'))->name('front.warranty');
 
 /* BACKEND */

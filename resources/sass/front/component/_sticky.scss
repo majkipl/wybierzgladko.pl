@@ -1,0 +1,47 @@
+.sticky {
+    position: fixed;
+    bottom: 50%;
+    right: 50%;
+    background-color: $quaternary;
+    z-index: 9999;
+    font-size: 1.3rem;
+    transform: translate(calc(50% - 25px), calc(50% + 25px));
+    /*display: none;*/
+
+    @media (min-width: 768px) {
+        /*display: block;*/
+        bottom: 0;
+        right: 0;
+        transform: none;
+    }
+
+    span {
+        color: #fff;
+    }
+
+    .hamburger {
+        top: -50px;
+        right: -50px;
+        padding: 9px 3px;
+        background-color: #ed1c24;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &:after {
+        content: "";
+        width: 15px;
+        height: 30px;
+        transform: rotate(-90deg);
+        background-image: url('/images/svg/arrow-left.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: initial;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+}

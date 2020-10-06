@@ -1,19 +1,53 @@
-// Body
-$body-bg: #f8fafc;
+$primary: #0657a5;
+$secondary: #05498b;
+$tertiary: #17386a;
+$quaternary: #ed1c24;
+$five-row: #666666;
+$six-row: #f2f2f2;
+$seven-row: #ffffff;
 
-// Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+$_text: "Gotham Medium";
+$_header: "Aspect Web ExtraBold";
 
-// Colors
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66d9b;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+$font-family-sans-serif: $_text;
+
+$size_percent_be: 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+
+$sizes_be: -300, -200, -150, -100, -90, -80, -70, -60, -50, -40, -30, -20, -15, -10,
+-5, 0, 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200, 300, auto;
+
+$spaces_be: "margin", "padding";
+
+$shop-links: (
+    "saturn.pl": 0,
+    "mediamarkt.pl": -90,
+    "euro.com.pl": -180,
+    "oleole.pl": -270,
+    "emag.pl": -360,
+    "morele.net": -450,
+    "agdwarszawa.pl": -540,
+    "neonet.pl": -630,
+    "neo24.pl": -720,
+    "mediadomek.pl": -810,
+    "mediaexpert.pl": -900,
+    "electro.pl": -990,
+    "avans.pl": -1080,
+    "selgros24.pl": -1170,
+    "zakupy-eleclerc.pl": -1260,
+    "payback.pl": -1350,
+    "zadowolenie.pl": -1440,
+    "kakto.pl": -1530,
+    "allegro.pl": -1620,
+    "komputronik.pl": -1710,
+    "enea.pl": -1800,
+    "energa.pl": -1890,
+    "al.to": -1980,
+    "mambonus.pl": -2070,
+    "mycenter.pl": -2160,
+    "redcoon.pl": -2250,
+    "juka.pl": -2340,
+    "partneragdrtv.com.pl": -2430,
+    "empik.com": -2520,
+    "strefa.enea.pl": -2610,
+    "maxelektro.pl": -2700
+);

@@ -1,0 +1,92 @@
+section#compare {
+    position: relative;
+
+    .filters {
+        background-color: $secondary;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        a.filter {
+            width: (100 / 7) * 1%;
+            text-align: center;
+            padding: 45px 0;
+            height: 100%;
+
+            &:hover,
+            &.active {
+                background-color: $primary;
+            }
+
+            img {
+                margin: 0;
+                width: 36px;
+                height: 36px;
+            }
+        }
+    }
+
+    .irons {
+        .grid {
+            &-item {
+                background-color: $secondary;
+                min-height: 100px;
+                margin: 150px 0 15px 0;
+                text-align: center;
+                padding: 100px 15px 30px 15px;
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                p {
+                    margin-bottom: 10px;
+                }
+
+                hr {
+                    border: 0;
+                    border-bottom: 2px solid $seven-row;
+                    width: 60px;
+                    margin-bottom: 30px;
+                }
+
+                table {
+                    font-size: 1.3rem;
+                    width: 100%;
+
+                    tr {
+                        :first-child {
+                            width: 60%;
+                        }
+
+                        td {
+                            padding: 5px 0;
+                        }
+                    }
+                }
+            }
+
+            &-item,
+            &-sizer {
+                width: calc(100%);
+
+                @media (min-width: 576px) {
+                    width: calc(50% - 17px);
+                }
+
+                @media (min-width: 992px) {
+                    width: calc(33% - 17px);
+                }
+            }
+
+            .gutter-sizer {
+                width: 30px;
+            }
+        }
+    }
+}
