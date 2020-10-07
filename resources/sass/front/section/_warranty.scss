@@ -1,0 +1,14 @@
+
+section#service {
+    position: relative;
+
+    &:before {
+        content: "";
+        height: 250px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $six-row;
+    }
+}

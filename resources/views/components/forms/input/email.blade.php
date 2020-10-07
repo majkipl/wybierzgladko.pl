@@ -1,16 +1,20 @@
 <div class="field">
-    <p>{{ $placeholder }}<span>{{ $required ? '*' : '' }}</span></p>
     <input type="email"
            name="{{ $name }}"
            id="{{ $name }}"
            value="{{ $value }}"
-{{--           placeholder="{{ $placeholder }}"--}}
            aria-label="{{ $placeholder }}{{ $required ? '*' : '' }}"
+           placeholder=""
            {{ $required ? 'required' : '' }}
            @if($max)
                maxlength="{{ $max }}"
            @endif
-               class="input"
+           @isset($class)
+               class="{{ $class }}"
+           @else
+               class="input px--15"
+           @endisset
            autocomplete="off"/>
+    <label class="label" for="{{ $name }}">{{ $placeholder }}{{ $required ? '*' : '' }}</label>
+    <span class="error-post error-{{ $name }}">{{ $error }}</span>
 </div>
-<span class="error-post error-{{ $name }}">{{ $error }}</span>

@@ -7,30 +7,34 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 @import "front/bootstrap-extended";
+
+// Main
+@import "front/main";
+
+// Components
 @import "front/component/hamburger";
 @import "front/component/dlmenu";
 @import "front/component/lightslider";
 @import "front/component/selectbox";
 @import "front/component/sticky";
-
-@import "front/main";
-
 @import "front/component/accent";
 @import "front/component/cta-button";
 @import "front/component/form";
 @import "front/component/tooltips";
 
 @import "front/header";
+@import "front/footer";
 
+// Sections
 @import "front/section/hero";
-//@import "section/top";
+@import "front/section/top";
 @import "front/section/know";
 @import "front/section/compare";
 @import "front/section/hesitate";
 @import "front/section/contact";
-//@import "section/form";
+@import "front/section/form";
 //@import "section/thx";
-//@import "section/warranty";
+@import "front/section/warranty";
 
 @import "front/section/buy";
 @import "front/section/popup";
@@ -39,7 +43,3 @@
 //@import "section/features";
 //@import "section/explore";
 //@import "section/reviews";
-
-@import "front/footer";
-
-//@import "webp";

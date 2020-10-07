@@ -1,4 +1,4 @@
-#form {
+.form {
     .field {
         width: 100%;
         position: relative;
@@ -46,7 +46,8 @@
         .input:focus + .label,
         .textarea:focus + .label,
         .input:not(:placeholder-shown) + .label,
-        .textarea:not(:placeholder-shown) + .label {
+        .textarea:not(:placeholder-shown) + .label
+        {
             top: -11px;
             font-size: 1.3rem;
             padding: 0 10px;
@@ -112,7 +113,7 @@
         }
 
         .error-post {
-            display: none;
+            color: $quaternary;
         }
 
         &.fieldset {

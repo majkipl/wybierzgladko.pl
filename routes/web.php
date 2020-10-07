@@ -26,7 +26,7 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('front.home');
 Route::get('/zelazka', [HomeController::class, 'index'])->name('front.home.irons');
 Route::get('/kontakt', [HomeController::class, 'index'])->name('front.home.contact');
-//Route::post('/kontakt/wyslij', [ContactController::class, 'send'])->name('front.contact.send');
+Route::post('/kontakt/wyslij', [ContactController::class, 'send'])->name('front.contact.send');
 //Route::get('/produkty', [HomeController::class, 'index'])->name('front.home.products');
 //Route::get('/wybierz-gladko', [HomeController::class, 'index'])->name('front.home.quiz');
 //Route::get('/satysfakcja-gwarantowana', [HomeController::class, 'index'])->name('front.home.satisfaction');

@@ -1,15 +1,13 @@
 @extends('layouts.front')
 
 @section('content')
-    <section class="e404" id="e404">
+    <section class="e404 bg--secondary py--100" id="e404">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12 my-4">
-                    <h1>4<span>0</span>4</h1>
+                    <img src="{{ asset('images/404.png') }}" alt="404" class="d-block mx--auto"/>
 
-                    <p class="my--30 my-md--60 my-lg--80 my-xl-100">strona nie istnieje</p>
-
-                    <a href="/" class="cta-button d-inline-block py--10 px--60"><span>POWRÓT DO STRONY GŁÓWNEJ</span></a>
+                    <a href="/" class="cta-button-primary py--10 px--30 d-inline-block mb--0 mt"><span>POWRÓT DO STRONY GŁÓWNEJ</span></a>
                 </div>
             </div>
         </div>
