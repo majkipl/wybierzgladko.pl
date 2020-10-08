@@ -1,79 +1,120 @@
-<section class="explore-other-product my--70 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"
-         id="exploreOtherProduct">
+<section class="explore text-center bg--primary py--50" id="explore">
     <div class="container">
-        <div class="row text-center">
-            <div class="col-12">
-                <h2 class="text-uppercase my--50">poznaj pozostałe produkty</h2>
+        <div class="row row-eq-height">
+            <div class="col-12 col-sm-9 col-md-10">
+                <h2 class="accent accent-right-none text-seven-row text-left mb--30"></h2>
+                <h2 class="text-left">Poznaj pozostałe produkty</h2>
+            </div>
+            <div class="col-12 col-sm-3 col-md-2 lSNav">
+                <a class="lSPrev clear"></a>
+                <a class="lSNext clear"></a>
             </div>
         </div>
-        <div class="row form text-center mb--70">
-            <div class="col-12">
-                <div class="row row-eq-height products">
-                    @if($current != "psu")
-                        <div class="col-12 col-sm-6 col-md-2 col-lg-2 text-center mt--60">
-                            <a class="power-steam-ultra d-flex flex-column align-items-left justify-content-end w-100 h-100 pt--90 pb--15"
-                               href="{{ route('front.product.psu') }}" title="Power Steam Ultra">
-                                <img src="{{ asset('images/power-steam-ultra.png') }}" alt="Power Steam Ultra">
-                                <span class="d-block">Power <br class="d-none d-xl-block">Steam Ultra</span>
-                            </a>
+        <div class="row">
+            <div class="col-12 mt--30">
+                <ul id="productsSlider">
+                    <li class="p1">
+                        <img src="{{ asset('images/irons/colour-control-supreme.png') }}" alt="Colour Control Supreme" />
+                        <div>
+                            <h5>Colour Control Supreme</h5>
+                            <p>Chroń kolory swoich ubrań</p>
                         </div>
-                    @endif
-                    @if($current != "ot")
-                        <div class="col-12 col-sm-6 col-md-2 col-lg-2 text-center mt--90 mt-md--60">
-                            <a class="one-temperature d-flex flex-column align-items-left justify-content-end w-100 h-100 pt--90 pb--15"
-                               href="{{ route('front.product.ot') }}" title="One Temperature">
-                                <img src="{{ asset('images/one-temperature.png') }}" alt="One Temperature">
-                                <span class="d-block">One Temperature</span>
-                            </a>
+                        <hr>
+                        <a href="/colour-control-supreme/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                            <span>więcej &gt;</span>
+                        </a>
+                    </li>
+
+                    <li class="p2">
+                        <img src="{{ asset('images/irons/quiet-super-steam.png') }}" alt="Quiet Super Steam" />
+                        <div>
+                            <h5>Quiet Super Steam</h5>
+                            <p>Pożegnaj zagniecenia jednym ruchem</p>
                         </div>
-                    @endif
-                    @if($current != "i")
-                        <div class="col-12 col-sm-6 col-md-2 col-lg-2 text-center mt--90 mt-md--60">
-                            <a class="impact w-100 d-flex flex-column align-items-left justify-content-end h-100 pt--90 pb--15"
-                               href="{{ route('front.product.i') }}" title="Impact">
-                                <img src="{{ asset('images/impact.png') }}" alt="Impact">
-                                <span class="d-block">Impact</span>
-                            </a>
+                        <hr>
+                        <a href="/quiet-super-steam/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                            <span>więcej &gt;</span>
+                        </a>
+                    </li>
+
+                    <li class="p3">
+                        <img src="{{ asset('images/irons/power-steam-ultra.png') }}" alt="Power Steam Ultra" />
+                        <div>
+                            <h5>Power Steam Ultra</h5>
+                            <p>Ciesz się dużą mocą żelazka w bardzo dobrej cenie</p>
                         </div>
-                    @endif
-                    @if($current != "pgr")
-                        <div class="col-12 col-sm-6 col-md-2 col-lg-2 text-center mt--90 mt-md--60">
-                            <a class="pearl-glide-rose d-flex flex-column align-items-left justify-content-end w-100 h-100 pt--90 pb--15"
-                               href="{{ route('front.product.pgr') }}" title="Pearl Glide Rose">
-                                <img src="{{ asset('images/pearl-glide-rose.png') }}" alt="Pearl Glide Rose">
-                                <span class="d-block">Pearl Glide Rose</span>
-                            </a>
+                        <hr>
+                        <a href="/power-steam-ultra/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                            <span>więcej &gt;</span>
+                        </a>
+                    </li>
+                    <li class="p4">
+                        <img src="{{ asset('images/irons/pearl-glide-rose.png') }}" alt="Pearl Glide Rose" />
+                        <div>
+                            <h5>Pearl Glide Rose</h5>
+                            <p>Ciesz się funkcjonalnym i stylowym żelazkiem</p>
                         </div>
-                    @endif
-                    @if($current != "sg")
-                        <div class="col-12 col-sm-6 col-md-2 col-lg-2 text-center mt--90 mt-md--60">
-                            <a class="steam-genie d-flex flex-column align-items-left justify-content-end w-100 h-100 pt--90 pb--15"
-                               href="{{ route('front.product.sg') }}" title="Steam Genie">
-                                <img src="{{ asset('images/steam-genie.png') }}" alt="Steam Genie">
-                                <span class="d-block">Steam Genie</span>
-                            </a>
+                        <hr>
+                        <a href="/pearl-glide-rose/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                            <span>więcej &gt;</span>
+                        </a>
+                    </li>
+                    <li class="p5">
+                        <img src="{{ asset('images/irons/one-temperature.png') }}" alt="One Temperature" />
+                        <div>
+                            <h5>One Temperature</h5>
+                            <p>Prasuj bez potrzeby regulacji temperatury</p>
                         </div>
-                    @endif
-                    @if($current != "cot")
-                        <div class="col-12 col-sm-6 col-md-2 col-lg-2 text-center mt--90 mt-md--60">
-                            <a class="cordless-one-temperature d-flex flex-column align-items-left justify-content-end w-100 h-100 pt--90 pb--15"
-                               href="{{ route('front.product.cot') }}" title="Cordless One Temperature">
-                                <img src="{{ asset('images/cordless-one-temperature.png') }}"
-                                     alt="Cordless One Temperature">
-                                <span class="d-block">Cordless One Temperature</span>
-                            </a>
+                        <hr>
+                        <a href="/one-temperature/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                            <span>więcej &gt;</span>
+                        </a>
+                    </li>
+                    <li class="p6">
+                        <img src="{{ asset('images/irons/impact.png') }}" alt="Impact" />
+                        <div>
+                            <h5>Impact</h5>
+                            <p>Działaj bez obaw z odpornym na upadki i zniszczenia</p>
                         </div>
-                    @endif
-                    @if($current != "cx")
-                        <div class="col-12 col-sm-6 col-md-2 col-lg-2 text-center mt--90 mt-md--60">
-                            <a class="copper-express d-flex flex-column align-items-left justify-content-end w-100 h-100 pt--90 pb--15"
-                               href="{{ route('front.product.cx') }}" title="Copper Express">
-                                <img src="{{ asset('images/copper-express.png') }}" alt="Copper Express">
-                                <span class="d-block">Copper Express</span>
-                            </a>
+                        <hr>
+                        <a href="/impact/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                            <span>więcej &gt;</span>
+                        </a>
+                    </li>
+                    <li class="p7">
+                        <img src="{{ asset('images/irons/copper-express.png') }}" alt="Copper Express" />
+                        <div>
+                            <h5>Copper Express</h5>
+                            <p>Wyraź swój styl</p>
                         </div>
-                    @endif
-                </div>
+                        <hr>
+                        <a href="/copper-express/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                            <span>więcej &gt;</span>
+                        </a>
+                    </li>
+                    <li class="p8">
+                        <img src="{{ asset('images/irons/steam-genie.png') }}" alt="Steam Genie" />
+                        <div>
+                            <h5>Steam Genie</h5>
+                            <p>Prasuj wygodnie bez rozkładania deski</p>
+                        </div>
+                        <hr>
+                        <a href="/steam-genie/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                            <span>więcej &gt;</span>
+                        </a>
+                    </li>
+                    <li class="p9">
+                        <img src="{{ asset('images/irons/cordless-one-temperature.png') }}" alt="Cordless One Temperature" />
+                        <div>
+                            <h5>Cordless One Temperature</h5>
+                            <p>Wygodne prasowanie bez kabla i regulacji temperatury</p>
+                        </div>
+                        <hr>
+                        <a href="/cordless-one-temperature/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                            <span>więcej &gt;</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

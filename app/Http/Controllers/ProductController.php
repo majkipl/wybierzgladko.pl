@@ -48,4 +48,16 @@ class ProductController extends Controller
         $reviews = Review::getAllCachedBy(Product::CX);
         return view('product/copperExpress', ['reviews' => $reviews]);
     }
+
+    public function quietSuperSteam()
+    {
+        $reviews = Review::getAllCachedBy(Product::QSS);
+        return view('product/quietSuperSteam', ['reviews' => $reviews]);
+    }
+
+    public function colourControlSupreme()
+    {
+        $reviews = Review::getAllCachedBy(Product::CCS);
+        return view('product/colourControlSupreme', ['reviews' => $reviews]);
+    }
 }

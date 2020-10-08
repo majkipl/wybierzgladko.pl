@@ -1,126 +1,75 @@
 @extends('layouts.front')
 
 @section('content')
-    @include('home.section.baner', ['isHome' => false, 'showSlide' => "cot"])
-    @include('home.section.banerRwd', ['isHome' => false, 'showSlide'=>"cot", 'includeClass' => "product-page"])
+    @include('home.section.hero', ['isHome' => false, 'showSlide' => "cot"])
 
-    <section class="product cordless-one-temperature py--70" id="cordlessOneTemperature">
+    @component( 'components.product.headline', ['title' => 'Żelazko Bezprzewodowe One Temperature'])
+        Prasowanie bez plączącego się kabla i bez potrzeby regulowania temperatury? Tak, to możliwe! Poznaj nasze najnowsze żelazko One Temperature i przekonaj się, że dbanie o gładkość ulubionych ubrań jeszcze nigdy nie było tak wygodne.
+    @endcomponent
+
+    <section class="features text-center bg--six-row pb--90" id="features">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-10 offset-lg-1 text-center wow fadeInUp" data-wow-duration="1s"
-                     data-wow-delay="0.5s">
-                    <h2 class="text-uppercase mb--50">ŻELAZKO BEZPRZEWODOWE ONE TEMPERATURE</h2>
-
-                    <p class="mb--40">Prasowanie bez plączącego się kabla i bez potrzeby regulowania temperatury? Tak,
-                        to możliwe! Poznaj nasze najnowsze żelazko One Temperature i przekonaj się, że dbanie o gładkość
-                        ulubionych ubrań jeszcze nigdy nie było tak wygodne.</p>
+            <div class="row f1 features-ti d-flex">
+                <div class="col-12 col-sm-7 col-md-7 col-lg-6 col-xl-5 offset-lg-1 offset-xl-2 d-flex flex-column justify-content-center text-right features-t py--30 py-sm--40 py-md--30 order-0">
+                    <h5 class="accent accent-left-none text-tertiary text-right mb--15"></h5>
+                    <h5 class="text-tertiary mb--30">Szybkie prasowanie bez przewodów</h5>
+                    <p>Dobrze wiemy, że każdy poranek to walka z czasem. Z pewnością ucieszy cię fakt, że dzięki funkcji szybkiego ładowania, nasze żelazko jest gotowe do pracy w niespełna 6 sekund*. A ty możesz się cieszyć swobodą prasowania bez plączących się dookoła przewodów. I zawsze zdążysz na czas!</p>
+                    <em class="mt--30">*w przypadku używania między 5-10 sekundowymi seriami prasowania</em>
+                </div>
+                <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 features-i order-1">
+                    @component( 'components.product.image', ['name' => 'cot/cot-1', 'alt' => 'Szybkie prasowanie bez przewodów'])
+                    @endcomponent
                 </div>
             </div>
-
-            <div class="row row-eq-height pb--30">
-                <div
-                    class="col-12 col-sm-6 col-lg-5 offset-lg-2 d-flex flex-column align-items-left justify-content-center order-1 order-sm-0 mt--30 mt-sm--0 text-center text-sm-left wow fadeInUp"
-                    data-wow-duration="1s" data-wow-delay="0.5s">
-                    <h3 class="text-uppercase mb--0">SZYBKIE PRASOWANIE BEZ PRZEWODÓW</h3>
-
-                    <div class="shape my--20 mx--auto mx-sm--0"></div>
-
-                    <p>Dobrze wiemy, że każdy poranek to walka z czasem. Z pewnością ucieszy Cię fakt, że dzięki funkcji
-                        szybkiego ładowania, nasze żelazko jest gotowe do pracy w niespełna 6 sekund*. A Ty możesz się
-                        cieszyć swobodą prasowania bez plączących się dookoła przewodów. I zawsze zdążysz na czas!</p>
+            <div class="row f2 features-it d-flex">
+                <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 features-i order-1 order-sm-0">
+                    @component( 'components.product.image', ['name' => 'cot/cot-2', 'alt' => 'Jedna temperatura do wszystkich tkanin'])
+                    @endcomponent
                 </div>
-                <div
-                    class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center justify-content-center order-0 order-sm-1 wow fadeInUp"
-                    data-wow-duration="1s" data-wow-delay="0.75s">
-                    <img src="{{ asset('images/products/cot/1.jpg') }}" alt="SZYBKIE PRASOWANIE BEZ PRZEWODÓW"
-                         class="d-block product-circle"/>
+                <div class="col-12 col-sm-7 col-md-7 col-lg-6 col-xl-5 d-flex flex-column justify-content-center text-left features-t py--30 py-sm--40 py-md--30 order-0 order-sm-1">
+                    <h5 class="accent accent-right-none text-tertiary text-left mb--15"></h5>
+                    <h5 class="text-tertiary mb--30">Jedna temperatura do wszystkich tkanin</h5>
+                    <p>jeszcze jedna znakomita wiadomość! Już nigdy więcej nie musisz się zastanawiać, jaką temperaturą prasować swoje ubrania. Od teraz wszystkie tkaniny – od jeansu po jedwab – są znakomicie wygładzone jedną, bezpieczną temperaturą. Bez stresu!</p>
                 </div>
             </div>
-
-            <div class="row row-eq-height pb--30">
-                <div
-                    class="col-12 col-sm-6 col-lg-4 offset-lg-1 d-flex flex-column align-items-center justify-content-center wow fadeInUp"
-                    data-wow-duration="1s" data-wow-delay="0.75s">
-                    <img src="{{ asset('images/products/cot/2.jpg') }}" alt="JEDNA TEMPERATURA DO WSZYSTKICH TKANIN "
-                         class="d-block product-circle"/>
+            <div class="row f3 features-ti d-flex">
+                <div class="col-12 col-sm-7 col-md-7 col-lg-6 col-xl-5 offset-lg-1 offset-xl-2 d-flex flex-column justify-content-center text-right features-t py--30 py-sm--40 py-md--30 order-0">
+                    <h5 class="accent accent-left-none text-tertiary text-right mb--15"></h5>
+                    <h5 class="text-tertiary mb--30">Imponująca moc</h5>
+                    <p>Dzięki dużej mocy 2600w zapewnia wysoką wydajność, która jest w stanie poradzić sobie nawet z najtrudniejszymi zagnieceniami.</p>
                 </div>
-                <div
-                    class="col-12 col-sm-6 col-lg-6 offset-lg-1 d-flex flex-column align-items-left justify-content-center mt--30 mt-sm--0 text-center text-sm-left wow fadeInUp"
-                    data-wow-duration="1s" data-wow-delay="0.5s">
-                    <h3 class="text-uppercase mb--0">JEDNA TEMPERATURA DO WSZYSTKICH TKANIN </h3>
-
-                    <div class="shape my--20 mx--auto mx-sm--0"></div>
-
-                    <p>Jeszcze jedna znakomita wiadomość! Już nigdy więcej nie musisz się zastanawiać, jaką temperaturą
-                        prasować swoje ubrania. Od teraz wszystkie tkaniny – od jeansu po jedwab – są znakomicie
-                        wygładzone jedną, bezpieczną temperaturą. Bez stresu!</p>
+                <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 features-i order-1">
+                    @component( 'components.product.image', ['name' => 'cot/cot-3', 'alt' => 'Imponująca moc'])
+                    @endcomponent
                 </div>
             </div>
-
-            <div class="row row-eq-height pb--30">
-                <div
-                    class="col-12 col-sm-6 col-lg-5 offset-lg-2 d-flex flex-column align-items-left justify-content-center order-1 order-sm-0 mt--30 mt-sm--0 text-center text-sm-left wow fadeInUp"
-                    data-wow-duration="1s" data-wow-delay="0.5s">
-                    <h3 class="text-uppercase mb--0">IMPONUJĄCA MOC</h3>
-
-                    <div class="shape my--20 mx--auto mx-sm--0"></div>
-
-                    <p>Dzięki dużej mocy 2600W zapewnia wysoką wydajność, która jest w stanie poradzić sobie nawet z
-                        najtrudniejszymi zagnieceniami.</p>
+            <div class="row f4 features-it d-flex">
+                <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 features-i order-1 order-sm-0">
+                    @component( 'components.product.image', ['name' => 'cot/cot-4', 'alt' => 'Pomoc z trudnymi materiałami'])
+                    @endcomponent
                 </div>
-                <div
-                    class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center justify-content-center order-0 order-sm-1 wow fadeInUp"
-                    data-wow-duration="1s" data-wow-delay="0.75s">
-                    <img src="{{ asset('images/products/cot/3.jpg') }}" alt="IMPONUJĄCA MOC"
-                         class="d-block product-circle"/>
+                <div class="col-12 col-sm-7 col-md-7 col-lg-6 col-xl-5 d-flex flex-column justify-content-center text-left features-t py--30 py-sm--40 py-md--30 order-0 order-sm-1">
+                    <h5 class="accent accent-right-none text-tertiary text-left mb--15"></h5>
+                    <h5 class="text-tertiary mb--30">Pomoc z trudnymi materiałami</h5>
+                    <p>Potrzebujesz dodatkowej pomocy, aby usunąć zagniecenia z koszuli? Użyj funkcji uderzenie pary 210g. Kiedy skierujesz parę prosto na ubrania, materiał zmięknie, umożliwiając łatwe wygładzenie zagnieceń. A dzięki funkcji ciągłemu wytwarzaniu pary 45 g osiągniesz idealne efekty prasowania za każdym razem.</p>
                 </div>
             </div>
-
-            <div class="row row-eq-height pb--30">
-                <div
-                    class="col-12 col-sm-6 col-lg-4 offset-lg-1 d-flex flex-column align-items-center justify-content-center wow fadeInUp"
-                    data-wow-duration="1s" data-wow-delay="0.75s">
-                    <img src="{{ asset('images/products/cot/4.jpg') }}" alt="POMOC Z TRUDNYMI MATERIAŁAMI"
-                         class="d-block product-circle"/>
+            <div class="row f5 features-ti d-flex">
+                <div class="col-12 col-sm-7 col-md-7 col-lg-6 col-xl-5 offset-lg-1 offset-xl-2 d-flex flex-column justify-content-center text-right features-t py--30 py-sm--40 py-md--30 order-0">
+                    <h5 class="accent accent-left-none text-tertiary text-right mb--15"></h5>
+                    <h5 class="text-tertiary mb--30">Oszczędność czasu</h5>
+                    <p>dzięki ceramicznej stopie prasowanie zajmuje znacznie mniej czasu. Wszystko dzięki konstrukcji umożliwiającej równomierne rozprowadzanie ciepła i gładki poślizg po każdym rodzaju tkaniny.</p>
                 </div>
-                <div
-                    class="col-12 col-sm-6 col-lg-6 offset-lg-1 d-flex flex-column align-items-left justify-content-center mt--30 mt-sm--0 text-center text-sm-left wow fadeInUp"
-                    data-wow-duration="1s" data-wow-delay="0.5s">
-                    <h3 class="text-uppercase mb--0">POMOC Z TRUDNYMI MATERIAŁAMI</h3>
-
-                    <div class="shape my--20 mx--auto mx-sm--0"></div>
-
-                    <p>Funkcja pionowego strumienia pary sprawdza się znakomicie przy wyrównywaniu fałd na firankach czy
-                        poduszkach.</p>
+                <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 features-i order-1">
+                    @component( 'components.product.image', ['name' => 'cot/cot-5', 'alt' => 'Oszczędność czasu'])
+                    @endcomponent
                 </div>
             </div>
-
-            <div class="row row-eq-height pb--30">
-                <div
-                    class="col-12 col-sm-6 col-lg-5 offset-lg-2 d-flex flex-column align-items-left justify-content-center order-1 order-sm-0 mt--30 mt-sm--0 text-center text-sm-left wow fadeInUp"
-                    data-wow-duration="1s" data-wow-delay="0.5s">
-                    <h3 class="text-uppercase mb--0">OSZCZĘDNOŚĆ CZASU</h3>
-
-                    <div class="shape my--20 mx--auto mx-sm--0"></div>
-
-                    <p>Dzięki ceramicznej stopie prasowanie zajmuje znacznie mniej czasu. Wszystko dzięki konstrukcji
-                        umożliwiającej równomierne rozprowadzanie ciepła i gładki poślizg po każdym rodzaju tkaniny.</p>
-                </div>
-                <div
-                    class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center justify-content-center order-0 order-sm-1 wow fadeInUp"
-                    data-wow-duration="1s" data-wow-delay="0.75s">
-                    <img src="{{ asset('images/products/cot/5.jpg') }}" alt="OSZCZĘDNOŚĆ CZASU"
-                         class="d-block product-circle"/>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    @include('product.section.whereBuy', ['productSlug' => "cot"])
-    @include('product.section.exploreOtherProduct', ['current' => 'cot'])
-    @include('product.section.reviews')
-
-    @include('home.section.hesitate')
+        @include('product.section.whereBuy', ['productSlug' => 'i'])
+        @include('product.section.exploreOtherProduct', ['current' => 'i'])
+        @include('product.section.reviews')
 
 @endsection

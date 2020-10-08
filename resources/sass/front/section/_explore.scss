@@ -1,0 +1,64 @@
+section#explore {
+    #productsSlider {
+        li {
+            background-color: $secondary;
+            padding: 120px 15px 50px 15px;
+            position: relative;
+            margin-top: 120px;
+
+            img {
+                position: absolute;
+                top: -120px;
+                left: 50%;
+                margin-left: -120px;
+            }
+
+            hr {
+                border: 0;
+                border-bottom: 2px solid $seven-row;
+                width: 60px;
+                margin-top: 15px;
+                margin-bottom: 45px;
+            }
+        }
+    }
+
+    .lSNav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding-bottom: 15px;
+        margin-top: 30px;
+
+        @media (min-width: 576px) {
+            justify-content: flex-end;
+            margin-top: 0;
+        }
+
+        a {
+            background-image: url(/images/svg/arrow-left.svg);
+            width: 32px;
+            display: block;
+            height: 32px;
+            transition: opacity 0.35s linear 0s;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: initial;
+            opacity: 0.5;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &.lSNext {
+                transform: rotate(180deg);
+            }
+
+            @media (min-width: 576px) {
+                margin-left: 30px;
+            }
+        }
+    }
+}

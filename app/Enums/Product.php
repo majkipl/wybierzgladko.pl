@@ -11,6 +11,8 @@ class Product
     const PGR = 'Pearl Glide Rose';
     const PSU = 'Power Steam Ultra';
     const SG = 'Steam Genie';
+    const QSS = 'Quiet Super Steam';
+    const CCS = 'Colour Control Supreme';
 
     const ALL = [
         self::CX,
@@ -19,7 +21,9 @@ class Product
         self::OT,
         self::PGR,
         self::PSU,
-        self::SG
+        self::SG,
+        self::QSS,
+        self::CCS
     ];
     public static function toSelect(): array
     {

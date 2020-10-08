@@ -42139,6 +42139,7 @@ var starter = {
       starter.main.onClick();
       starter.main.onChange();
       starter.main.onSubmit();
+      starter.main.whereBuy();
       starter.dlmenu.init();
       starter.lightslider.init();
       starter.tooltip.init();
@@ -42211,9 +42212,23 @@ var starter = {
         return false;
       });
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '#contact a.send', function () {
-        alert('Before submit');
         jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('form').submit();
-        alert('After submit');
+        return false;
+      });
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", "section#explore .lSNav a", function () {
+        if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass("lSPrev")) {
+          starter.lightslider._var.products.goToPrevSlide();
+        } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass("lSNext")) {
+          starter.lightslider._var.products.goToNextSlide();
+        }
+        return false;
+      });
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", "section#reviews .lSNav a", function () {
+        if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass("lSPrev")) {
+          starter.lightslider._var.reviews.goToPrevSlide();
+        } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass("lSNext")) {
+          starter.lightslider._var.reviews.goToNextSlide();
+        }
         return false;
       });
     },
@@ -42345,6 +42360,21 @@ var starter = {
           break;
         default:
           return false;
+      }
+    },
+    whereBuy: function whereBuy() {
+      var whereBuy = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#whereBuy");
+      if (whereBuy.length > 0) {
+        var product_id = whereBuy.data('product');
+        var items = shops['popup-' + product_id];
+        jquery__WEBPACK_IMPORTED_MODULE_0___default.a.each(items, function (key, url) {
+          if (url !== '#') {
+            var item = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<div>').addClass('col-12 col-sm-6 col-md-4 col-lg-3 shop-item');
+            var a = jquery__WEBPACK_IMPORTED_MODULE_0___default()('<a>').addClass('shop').attr('href', url).attr('title', 'KUP TERAZ').attr('target', '_blank');
+            item.append(a);
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()("section#whereBuy .shops").append(item);
+          }
+        });
       }
     }
   },

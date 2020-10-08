@@ -47,6 +47,7 @@ const starter = {
             starter.main.onClick();
             starter.main.onChange();
             starter.main.onSubmit();
+            starter.main.whereBuy();
 
             starter.dlmenu.init();
             starter.lightslider.init();
@@ -147,9 +148,27 @@ const starter = {
             });
 
             $(document).on('click', '#contact a.send', function () {
-                alert('Before submit');
                 $(this).closest('form').submit();
-                alert('After submit')
+                return false;
+            });
+
+            $(document).on("click", "section#explore .lSNav a", function () {
+                if ($(this).hasClass("lSPrev")) {
+                    starter.lightslider._var.products.goToPrevSlide();
+                } else if ($(this).hasClass("lSNext")) {
+                    starter.lightslider._var.products.goToNextSlide();
+                }
+
+                return false;
+            });
+
+            $(document).on("click", "section#reviews .lSNav a", function () {
+                if ($(this).hasClass("lSPrev")) {
+                    starter.lightslider._var.reviews.goToPrevSlide();
+                } else if ($(this).hasClass("lSNext")) {
+                    starter.lightslider._var.reviews.goToNextSlide();
+                }
+
                 return false;
             });
         },
@@ -295,6 +314,23 @@ const starter = {
                     break;
                 default:
                     return false;
+            }
+        },
+
+        whereBuy: function () {
+            const whereBuy = $("#whereBuy");
+            if (whereBuy.length > 0) {
+                const product_id = whereBuy.data('product');
+                const items = shops['popup-' + product_id];
+
+                $.each(items, function (key, url) {
+                    if (url !== '#') {
+                        const item = $('<div>').addClass('col-12 col-sm-6 col-md-4 col-lg-3 shop-item');
+                        const a = $('<a>').addClass('shop').attr('href', url).attr('title', 'KUP TERAZ').attr('target', '_blank');
+                        item.append(a);
+                        $("section#whereBuy .shops").append(item);
+                    }
+                });
             }
         },
     },
