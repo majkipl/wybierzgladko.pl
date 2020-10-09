@@ -1,4 +1,4 @@
-<div class="field">
+<div class="field @isset($classWrapper){{ $classWrapper }}@endisset">
     <textarea class="textarea p--15"
               name="{{ $name }}"
               id="{{ $name }}"

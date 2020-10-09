@@ -1,4 +1,4 @@
-<div class="field">
+<div class="field @isset($classWrapper){{ $classWrapper }}@endisset">
     <input type="email"
            name="{{ $name }}"
            id="{{ $name }}"

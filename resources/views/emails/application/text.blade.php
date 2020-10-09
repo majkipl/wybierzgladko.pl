@@ -1,16 +1,24 @@
-POTWIERDZENIE UDZIAŁU W PROMOCJI
+Dziękujemy za skorzystanie
+z promocji Satysfakcja Gwarantowana Russell Hobbs.
 
-DZIĘKUJEMY ZA UDZIAŁ W NASZYM PROGRAMIE, TWOJE ZGŁOSZENIE ZOSTAŁO PRZYJĘTE!
+Cześć {{ $details['firstname'] }}
 
-1. SPAKUJ GO do oryginalnego pudełka wraz ze wszystkimi akcesoriami, instrukcją obsługi i kartą gwarancyjną oraz oryginałem dowodu zakupu
+Dziękujemy za skorzystanie z promocji Satysfakcja Gwarantowana Russell Hobbs.
+Prosimy o wysłanie zwracanego żelazka wraz z dowodem zakupu na adres:
 
-2. NADAJ URZĄDZENIE kurierem na nasz adres: Highlite Bielecka, Jellinek Spółka Jawna, ul. Pomorska 55/2, 50-217 Wrocław
+Highlite Bielecka, Jellinek Spółka Jawna
+ul. Pomorska 55/2
+50-217 Wrocław
 
-3. ZWROT GOTÓWKI nastąpi w ciągu 14 dni kalendarzowych od daty otrzymania produktu na numer konta podany w formularzu
+Gdy żelazko do nas dotrze, zwrot pieniędzy zostanie dokonany
+na podany numer konta w ciągu 14 dni.
 
-Pozdrawiamy
-Zespół Russell Hobbs
+Pozdrawiamy!
+Russell Hobbs
 
+---
 
+Ta wiadomość została do Ciebie wysłana, ponieważ Twój adres e-mail został użyty podczas składania zgłoszenia do promocji na stronie www.MysliszCzajnik.pl. Nadawcą wiadomości jest agencja Highlite Bielecka, Jellinek Spółka Jawna, działająca na zlecenie Spectrum Brands Poland sp. z o.o. z siedzibą w Warszawie, przy ul. Bitwy Warszawskiej 1920 r. 7a,zarejestrowanej przez Sąd Rejonowy dla m.st. Warszawy w Warszawie, XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem KRS: 0000063377, NIP: 9511983304, REGON: 016359527
+Inspektor Ochrony Danych Osobowych: Laura Devine dsr@eu.spectrumbrands.com.
 
-Otrzymujesz tego maila, ponieważ wyraziłeś/aś zgodę na przetwarzanie danych przez SPECTRUM BRANDS POLAND sp. z o.o. z siedzibą w Warszawie, ul. Bitwy Warszawskiej 1920 r. 7A, 02-366 Warszawa, o numerze NIP 951-19-83-304 wpisanym do rejestru z postanowieniem Sądu Rejonowego w Warszawie, XII Wydział Gospodarczy, pod nr KRS: 0000063377.
+Regulamin promocji znajdziesz na stronie internetowej www.WybierzGladko.pl

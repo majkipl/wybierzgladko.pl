@@ -142,6 +142,10 @@ const starter = {
                 return false;
             });
 
+            $(document).on("click", "button.button-uploads", function () {
+                $(this).closest('.field').find("input[type=file]").trigger("click");
+            });
+
             $(document).on('click', '#form .submit', function () {
                 $('#form form#save').submit();
                 return false;
@@ -169,6 +173,13 @@ const starter = {
                     starter.lightslider._var.reviews.goToNextSlide();
                 }
 
+                return false;
+            });
+
+            $(document).on('click', 'label.select-all', function () {
+                const legals = $("#legal_1, #legal_2, #legal_3, #legal_4");
+                const checked = $(this).prev().is(':checked');
+                $(this).prev().add(legals).prop('checked', !checked);
                 return false;
             });
         },
@@ -205,40 +216,30 @@ const starter = {
                     switch (name) {
                         case 'name':
                             return starter.form.validator.isName(value, 'Imię i nazwisko');
-                        // case 'firstname':
-                        //     return starter.form.validator.isName(value, 'Imię');
-                        // case 'lastname':
-                        //     return starter.form.validator.isName(value, 'Nazwisko');
+                        case 'firstname':
+                            return starter.form.validator.isName(value, 'Imię');
+                        case 'lastname':
+                            return starter.form.validator.isName(value, 'Nazwisko');
                         case 'email':
                             return starter.form.validator.isEmail(value, 'Adres e-mail');
-                        // case 'phone':
-                        //     return starter.form.validator.isPhone(value, 'Telefon');
-                        // case 'address':
-                        //     return starter.form.validator.isAddress(value, 'Ulica');
-                        // case 'address_nb':
-                        //     return starter.form.validator.isAddressNb(value, 'Numer mieszkania');
-                        // case 'city':
-                        //     return starter.form.validator.isCity(value, 'Miasto');
-                        // case 'zip':
-                        //     return starter.form.validator.isZip(value, 'Kod pocztowy');
-                        // case 'iban':
-                        //     return starter.form.validator.isIban(value, 'Numer rachunku bankowego');
-                        // case 'reason':
-                        //     return starter.form.validator.isMessage(value, 'Powód');
-                        // case 'legal_1':
-                        //     return starter.form.validator.isLegal(item);
-                        // case 'legal_2':
-                        //     return starter.form.validator.isLegal(item);
-                        // case 'legal_3':
-                        //     return starter.form.validator.isLegal(item);
-                        // case 'legal_4':
-                        //     return starter.form.validator.isLegal(item);
+                        case 'phone':
+                            return starter.form.validator.isPhone(value, 'Telefon');
+                        case 'iban':
+                            return starter.form.validator.isIban(value, 'Numer rachunku bankowego');
+                        case 'reason':
+                            return starter.form.validator.isMessage(value, 'Powód');
+                        case 'legal_1':
+                            return starter.form.validator.isLegal(item);
+                        case 'legal_3':
+                            return starter.form.validator.isLegal(item);
+                        case 'legal_4':
+                            return starter.form.validator.isLegal(item);
                         case 'legal_5':
                             return starter.form.validator.isLegal(item);
                         case 'message':
                             return starter.form.validator.isMessage(value, 'Wiadomość');
-                        // case 'img_receipt':
-                        //     return starter.form.validator.isFile(item, 'Zdjęcie paragonu');
+                        case 'img_receipt':
+                            return starter.form.validator.isFile(item, 'Zdjęcie paragonu');
                         default:
                             return true;
                     }
@@ -293,6 +294,52 @@ const starter = {
                         if (starter._var.error.hasOwnProperty(key)) {
                             let value = starter._var.error[key];
                             $('.error-' + key).text(value).closest('.field').addClass('has-error');
+                        }
+                    }
+                }
+
+                return false;
+            });
+
+            $(document).on('submit', '#form form', function () {
+                $('.input, .textarea, .checkbox, .file').trigger('change');
+
+                console.log(starter._var.error);
+
+                if (Object.keys(starter._var.error).length === 0) {
+                    const fields = starter.form.getFields($(this).closest('form'));
+                    const url = $(this).closest('form').attr('action');
+                    const formData = new FormData();
+
+                    for (const field in fields) {
+                        formData.append(field, fields[field]);
+                    }
+
+                    axios({
+                        method: 'post', url: url, headers: {
+                            'content-type': 'multipart/form-data',
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        }, data: formData,
+                    }).then(function (response) {
+                        window.location = response.data.results.url;
+                    }).catch(function (error) {
+                        $(`.error-post`).text('');
+                        if (error.response) {
+                            Object.keys(error.response.data.errors).map((item) => {
+                                $(`.error-${item}`).text(error.response.data.errors[item][0]);
+                            });
+                        } else if (error.request) {
+                            console.log(error.request);
+                        } else {
+                            console.log('Error', error.message);
+                        }
+                    });
+                } else {
+                    $('.error-post').text('');
+                    for (let key in starter._var.error) {
+                        if (starter._var.error.hasOwnProperty(key)) {
+                            let value = starter._var.error[key];
+                            $('.error-' + key).text(value);
                         }
                     }
                 }
@@ -530,42 +577,6 @@ const starter = {
                     return `Pole ${name} jest wymagane.`;
                 } else if (!/^\+48(\s)?([1-9]\d{8}|[1-9]\d{2}\s\d{3}\s\d{3}|[1-9]\d{1}\s\d{3}\s\d{2}\s\d{2}|[1-9]\d{1}\s\d{2}\s\d{3}\s\d{2}|[1-9]\d{1}\s\d{2}\s\d{2}\s\d{3}|[1-9]\d{1}\s\d{4}\s\d{2}|[1-9]\d{2}\s\d{2}\s\d{2}\s\d{2}|[1-9]\d{2}\s\d{3}\s\d{2}|[1-9]\d{2}\s\d{4})$/.test(value)) {
                     return 'Wprowadź poprawny numer telefonu.';
-                } else {
-                    return true;
-                }
-            },
-            isAddress: (value, name) => {
-                if (value === "") {
-                    return `Pole ${name} jest wymagane.`;
-                } else if (value.length > 255) {
-                    return `Pole ${name} może mieć maksymalnie 255 znaków.`;
-                } else {
-                    return true;
-                }
-            },
-            isAddressNb: (value, name) => {
-                if (value === "") {
-                    return `Pole ${name} jest wymagane.`;
-                } else if (value.length > 16) {
-                    return `Pole ${name} może mieć maksymalnie 16 znaków.`;
-                } else {
-                    return true;
-                }
-            },
-            isCity: (value, name) => {
-                if (value === "") {
-                    return `Pole ${name} jest wymagane.`;
-                } else if (value.length < 2 || value.length > 64) {
-                    return `Pole ${name} musi mieć od 2 do 64 znaków.`;
-                } else {
-                    return true;
-                }
-            },
-            isZip: (value, name) => {
-                if (value === "") {
-                    return `Pole ${name} jest wymagane.`;
-                } else if (!/^[0-9]{2}-[0-9]{3}$/.test(value)) {
-                    return 'Wprowadź poprawny kod pocztowy.';
                 } else {
                     return true;
                 }

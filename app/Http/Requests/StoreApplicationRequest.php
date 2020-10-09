@@ -32,10 +32,6 @@ class StoreApplicationRequest extends FormRequest
                 'required',
                 'regex:/^\+48(\s)?([1-9]\d{8}|[1-9]\d{2}\s\d{3}\s\d{3}|[1-9]\d{1}\s\d{3}\s\d{2}\s\d{2}|[1-9]\d{1}\s\d{2}\s\d{3}\s\d{2}|[1-9]\d{1}\s\d{2}\s\d{2}\s\d{3}|[1-9]\d{1}\s\d{4}\s\d{2}|[1-9]\d{2}\s\d{2}\s\d{2}\s\d{2}|[1-9]\d{2}\s\d{3}\s\d{2}|[1-9]\d{2}\s\d{4})$/'
             ],
-            'address' => 'bail|required|string|max:255',
-            'address_nb' => 'bail|required|string|max:16',
-            'zip' => 'bail|required|regex:/^[0-9]{2}\-[0-9]{3}$/',
-            'city' => 'bail|required|string|min:2|max:64',
             'img_receipt' => 'bail|required|file|mimes:jpeg,jpg,png|max:4096',
             'iban' => [
                 'bail',
@@ -44,7 +40,6 @@ class StoreApplicationRequest extends FormRequest
             ],
             'reason' => 'bail|required|string|min:3|max:4096',
             'legal_1' => 'bail|required',
-            'legal_2' => 'bail|required',
             'legal_3' => 'bail|required',
             'legal_4' => 'bail',
         ];

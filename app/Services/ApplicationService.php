@@ -31,7 +31,6 @@ class ApplicationService
             $params = $request->all();
 
             $application->legal_1 = array_key_exists('legal_1', $params);
-            $application->legal_2 = array_key_exists('legal_2', $params);
             $application->legal_3 = array_key_exists('legal_3', $params);
             $application->legal_4 = array_key_exists('legal_4', $params);
 

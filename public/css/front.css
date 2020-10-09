@@ -21236,112 +21236,57 @@ section a:hover {
   margin-left: 60px;
 }
 
-.form .field.field-uploads {
-  background-color: #0657a5;
+.form .field.file-uploads .thumbs {
+  border: 2px solid #666666;
 }
 
-.form .uploads {
+.form .field.file-uploads .thumbs img {
+  max-width: 100%;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.form .field.file-uploads .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 100%;
+  float: left;
   position: relative;
   transition: all 0.5s ease;
-  color: white;
-  border: 0;
-  background-color: #0657a5;
-}
-
-.form .uploads:hover {
-  box-shadow: none;
-}
-
-.form .uploads .ajax-file-upload-container {
-  margin: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  padding: 10px 15px;
   height: 100%;
+  min-height: 300px;
 }
 
-.form .uploads .ajax-file-upload {
-  background: none;
-  box-shadow: none;
-  margin: 0;
-  width: 100%;
-  height: 170px;
-  line-height: 1.2;
-  display: inline-block;
-  border: none;
-  border-radius: 0px;
-  padding: 0;
-  text-align: left;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  float: left;
-  text-align: center;
+.form .field.file-uploads .info p {
+  margin: 30px 0;
 }
 
-.form .uploads .ajax-file-upload p {
-  font-size: 1.3rem;
+.form .field.file-uploads img {
+  max-width: 48px;
 }
 
-.form .uploads .ajax-file-upload-error {
-  color: #ed1c24;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-.form .ajax-file-upload-statusbar {
-  border: 0;
-  border-radius: 0px;
-  padding: 0;
-  margin: 0;
-  width: 100% !important;
+.form .field.file-uploads .hidden {
   display: none;
 }
 
-.form .ajax-file-upload-statusbar:first-of-type {
+.form .field.file-uploads .hidden img {
+  margin: 0 auto;
+  max-width: 300px;
   display: block;
 }
 
-.form .ajax-file-upload-statusbar .ajax-file-upload-progress {
-  width: 100%;
-  border: 0;
-  margin: 0;
-  height: 8px;
+.form .field.file-uploads .uploads-d-none {
+  overflow: hidden;
+  width: 0;
+  height: 0;
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.form .ajax-file-upload-statusbar .ajax-file-upload-progress .ajax-file-upload-bar {
-  background-color: #15181d;
-  width: 0;
-  height: 100%;
-  border-radius: 0;
-  color: #ffffff;
-}
-
-.form .ajax-file-upload-statusbar .ajax-file-upload-filename,
-.form .ajax-file-upload-statusbar .ajax-file-upload-error {
-  display: none;
-}
-
-.form .uploads-receipt {
-  float: right;
-}
-
-.form .uploads-receipt + .error-post:not(:empty) {
-  width: 290px;
-  float: right;
-}
-
-.form .uploads-tip {
-  width: 100%;
-}
-
-.form .uploads-thumb {
-  border: 2px solid #666666;
 }
 
 .tooltip {

@@ -23,7 +23,7 @@ class ApplicationObserver
     {
         $this->applicationService->sendMail(
             $application->email,
-            ['id' => $application->id, 'token' => $application->token]
+            ['id' => $application->id, 'token' => $application->token, 'firstname' => $application->firstname]
         );
     }
 
