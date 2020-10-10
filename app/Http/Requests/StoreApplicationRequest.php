@@ -41,7 +41,7 @@ class StoreApplicationRequest extends FormRequest
             'reason' => 'bail|required|string|min:3|max:4096',
             'legal_1' => 'bail|required',
             'legal_3' => 'bail|required',
-            'legal_4' => 'bail',
+            'legal_4' => 'bail|required',
         ];
     }
 
