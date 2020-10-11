@@ -27,15 +27,10 @@ class StoreApplicationRequestTest extends ValidationTestCase
             'lastname' => $this->faker->lastName,
             'email' => $this->faker->word . '@gmail.com',
             'phone' => $this->faker->numerify('+48#########'),
-            'address' => $this->faker->streetAddress,
-            'address_nb' => $this->faker->word,
-            'zip' => $this->faker->numerify('##-###'),
-            'city' => $this->faker->city,
             'img_receipt' => $this->createTestFile('receipt.jpg', 1024),
             'iban' => $this->faker->numerify('##########################'),
             'reason' => $this->faker->text(4000),
             'legal_1' => true,
-            'legal_2' => true,
             'legal_3' => true,
             'legal_4' => true
         ];
@@ -184,118 +179,6 @@ class StoreApplicationRequestTest extends ValidationTestCase
     }
 
     /** @test */
-    public function validation_fails_if_address_is_not_exists()
-    {
-        $data = $this->getData([], ['address']);
-
-        $this->expectValidationException($data, StoreApplicationRequest::class);
-    }
-
-    /** @test */
-    public function validation_fails_if_address_is_not_a_string()
-    {
-        $data = $this->getData([
-            'address' => $this->faker->numberBetween(1, 100)
-        ]);
-
-        $this->expectValidationException($data, StoreApplicationRequest::class);
-    }
-
-    /** @test */
-    public function validation_fails_if_address_is_exceeds_max_length()
-    {
-        $data = $this->getData([
-            'address' => Str::random(256),
-        ]);
-
-        $this->expectValidationException($data, StoreApplicationRequest::class);
-    }
-
-    /** @test */
-    public function validation_fails_if_address_nb_is_not_exists()
-    {
-        $data = $this->getData([], ['address_nb']);
-
-        $this->expectValidationException($data, StoreApplicationRequest::class);
-    }
-
-    /** @test */
-    public function validation_fails_if_address_nb_is_not_a_string()
-    {
-        $data = $this->getData([
-            'address_nb' => $this->faker->numberBetween(1, 100)
-        ]);
-
-        $this->expectValidationException($data, StoreApplicationRequest::class);
-    }
-
-    /** @test */
-    public function validation_fails_if_address_nb_is_exceeds_max_length()
-    {
-        $data = $this->getData([
-            'address_nb' => Str::random(17),
-        ]);
-
-        $this->expectValidationException($data, StoreApplicationRequest::class);
-    }
-
-    /** @test */
-    public function validation_fails_if_city_is_not_exists()
-    {
-        $data = $this->getData([], ['city']);
-
-        $this->expectValidationException($data, StoreApplicationRequest::class);
-    }
-
-    /** @test */
-    public function validation_fails_if_city_is_not_a_string()
-    {
-        $data = $this->getData([
-            'city' => $this->faker->numberBetween(1, 100)
-        ]);
-
-        $this->expectValidationException($data, StoreApplicationRequest::class);
-    }
-
-    /** @test */
-    public function validation_fails_if_city_is_less_that_min_length()
-    {
-        $data = $this->getData([
-            'city' => Str::random(1)
-        ]);
-
-        $this->expectValidationException($data, StoreApplicationRequest::class);
-    }
-
-    /** @test */
-    public function validation_fails_if_city_is_exceeds_max_length()
-    {
-        $data = $this->getData([
-            'city' => Str::random(65),
-        ]);
-
-        $this->expectValidationException($data, StoreApplicationRequest::class);
-    }
-
-    /** @test */
-    public function validation_fails_if_zip_is_not_exists()
-    {
-        $data = $this->getData([], ['zip']);
-
-        $this->expectValidationException($data, StoreApplicationRequest::class);
-    }
-
-    /** @test */
-    public function validation_fails_if_zip_is_not_regex()
-    {
-        $data = $this->getData([
-            'zip' => $this->faker->numerify('#####'),
-        ]);
-
-        $this->expectValidationException($data, StoreApplicationRequest::class);
-    }
-
-    /** @test */
     public function validation_fails_if_img_receipt_is_not_exists()
     {
         $data = $this->getData([], ['img_receipt']);
@@ -400,17 +283,17 @@ class StoreApplicationRequestTest extends ValidationTestCase
     }
 
     /** @test */
-    public function validation_fails_if_legal_2_is_exist()
+    public function validation_fails_if_legal_3_is_exist()
     {
-        $data = $this->getData([], ['legal_2']);
+        $data = $this->getData([], ['legal_3']);
 
         $this->expectValidationException($data, StoreApplicationRequest::class);
     }
 
     /** @test */
-    public function validation_fails_if_legal_3_is_exist()
+    public function validation_fails_if_legal_4_is_exist()
     {
-        $data = $this->getData([], ['legal_3']);
+        $data = $this->getData([], ['legal_4']);
 
         $this->expectValidationException($data, StoreApplicationRequest::class);
     }
