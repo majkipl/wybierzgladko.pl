@@ -26,6 +26,7 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('front.home');
 Route::get('/zelazka', [HomeController::class, 'index'])->name('front.home.irons');
 Route::get('/kontakt', [HomeController::class, 'index'])->name('front.home.contact');
+Route::get('/niewahaj-sie', [HomeController::class, 'index'])->name('front.home.hesitate');
 Route::post('/kontakt/wyslij', [ContactController::class, 'send'])->name('front.contact.send');
 Route::get('/power-steam-ultra', [ProductController::class, 'powerSteamUltra'])->name('front.product.psu');
 Route::get('/one-temperature', [ProductController::class, 'oneTemperature'])->name('front.product.ot');

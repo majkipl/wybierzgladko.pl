@@ -17,7 +17,7 @@
                             wiadomości link.</p>
                         <p>Pamiętaj, że wiadomość może znajdować się w SPAMIE. </p>
 
-                        <a href="/" class="cta-button-primary py--10 px--30 mt--20 mb--0 d-inline-block">
+                        <a href="{{ route('front.home') }}" class="cta-button-primary py--10 px--30 mt--20 mb--0 d-inline-block">
                             <span>wróć do strony głównej &gt;</span>
                         </a>
                     </div>

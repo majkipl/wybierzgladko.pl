@@ -1,4 +1,4 @@
-<a class="sticky text-center p--20" href="/niewahaj-sie/">
+<a class="sticky text-center p--20" href="{{ route('front.home.hesitate') }}">
     <button class="hamburger hamburger--collapse float-right is-active popup-close" type="button">
 			<span class="hamburger-box">
 				<span class="hamburger-inner"></span>

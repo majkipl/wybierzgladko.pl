@@ -1,4 +1,4 @@
-<section class="hero" id="hero" data-url="/">
+<section class="hero" id="hero" data-url="{{ route('front.home') }}">
     <ul id="homeHero">
 
         @if (!isset($showSlide) || $showSlide === "ccs")

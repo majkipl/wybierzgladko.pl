@@ -20,7 +20,7 @@
                             <p>Chroń kolory swoich ubrań</p>
                         </div>
                         <hr>
-                        <a href="/colour-control-supreme/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                        <a href="{{ route('front.product.ccs') }}" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
                             <span>więcej &gt;</span>
                         </a>
                     </li>
@@ -32,7 +32,7 @@
                             <p>Pożegnaj zagniecenia jednym ruchem</p>
                         </div>
                         <hr>
-                        <a href="/quiet-super-steam/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                        <a href="{{ route('front.product.qss') }}" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
                             <span>więcej &gt;</span>
                         </a>
                     </li>
@@ -44,7 +44,7 @@
                             <p>Ciesz się dużą mocą żelazka w bardzo dobrej cenie</p>
                         </div>
                         <hr>
-                        <a href="/power-steam-ultra/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                        <a href="{{ route('front.product.psu') }}" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
                             <span>więcej &gt;</span>
                         </a>
                     </li>
@@ -55,7 +55,7 @@
                             <p>Ciesz się funkcjonalnym i stylowym żelazkiem</p>
                         </div>
                         <hr>
-                        <a href="/pearl-glide-rose/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                        <a href="{{ route('front.product.pgr') }}" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
                             <span>więcej &gt;</span>
                         </a>
                     </li>
@@ -66,7 +66,7 @@
                             <p>Prasuj bez potrzeby regulacji temperatury</p>
                         </div>
                         <hr>
-                        <a href="/one-temperature/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                        <a href="{{ route('front.product.ot') }}" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
                             <span>więcej &gt;</span>
                         </a>
                     </li>
@@ -88,7 +88,7 @@
                             <p>Wyraź swój styl</p>
                         </div>
                         <hr>
-                        <a href="/copper-express/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                        <a href="{{ route('front.product.cx') }}" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
                             <span>więcej &gt;</span>
                         </a>
                     </li>
@@ -99,7 +99,7 @@
                             <p>Prasuj wygodnie bez rozkładania deski</p>
                         </div>
                         <hr>
-                        <a href="/steam-genie/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                        <a href="{{ route('front.product.sg') }}" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
                             <span>więcej &gt;</span>
                         </a>
                     </li>
@@ -110,7 +110,7 @@
                             <p>Wygodne prasowanie bez kabla i regulacji temperatury</p>
                         </div>
                         <hr>
-                        <a href="/cordless-one-temperature/" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
+                        <a href="{{ route('front.product.cot') }}" class="cta-button-primary py--10 px--30 d-inline-block mb--10" title="Dowiedz się więcej">
                             <span>więcej &gt;</span>
                         </a>
                     </li>

@@ -2,7 +2,7 @@
     <div class="container py--100">
         <div class="row row-eq-height">
             <div class="russell-hobbs-logo col-12 col-md-6 col-lg-7 col-xl-8 text-center text-md-left mb--30">
-                <a href="/" title="Russell Hobbs">
+                <a href="{{ route('front.home') }}" title="Russell Hobbs">
                     <img src="{{ asset('images/footer-logo.png') }}" alt="Russell Hobbs" />
                 </a>
             </div>
