@@ -21,6 +21,4 @@ php artisan route:clear             # czyścimy routing
 cd public
 ln -sf ../storage/app/public/ storage
 
-# utrzymuje kontener przy życiu - nie zamyka apache
-# wyświetla logi apacha
 exec docker-php-entrypoint apache2-foreground
