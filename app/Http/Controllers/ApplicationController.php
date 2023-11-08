@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreApplicationRequest;
 use App\Services\ApplicationService;
 use Exception;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
 class ApplicationController extends Controller
 {
-    private $applicationService;
+    private ApplicationService $applicationService;
 
     public function __construct(ApplicationService $applicationService)
     {
@@ -20,7 +21,7 @@ class ApplicationController extends Controller
     {
         return view('application/form');
     }
-    public function store(StoreApplicationRequest $request)
+    public function store(StoreApplicationRequest $request): JsonResponse
     {
         try {
             $this->applicationService->store(

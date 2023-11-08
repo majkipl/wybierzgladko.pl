@@ -10,7 +10,7 @@ use Illuminate\Http\Response;
 
 class ContactController extends Controller
 {
-    private $contactService;
+    private ContactService $contactService;
 
     public function __construct(ContactService $contactService)
     {

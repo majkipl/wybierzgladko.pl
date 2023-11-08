@@ -11,8 +11,8 @@ class ApplicationMail extends Mailable
     use Queueable, SerializesModels;
 
     public $details;
-    public $tpl_html;
-    public $tpl_text;
+    public string $tpl_html;
+    public string $tpl_text;
 
     /**
      * Create a new message instance.
