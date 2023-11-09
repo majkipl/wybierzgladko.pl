@@ -1,6 +1,6 @@
 ## About
 
-Landing Page in Laravel 6
+Landing Page in Laravel 8
 
 ## Technologies
 
