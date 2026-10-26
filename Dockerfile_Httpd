@@ -1,9 +1,22 @@
 FROM php:7.4-apache
 LABEL authors=${DOCKER_AUTHOR}
 
-RUN apt-get update -y
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
-RUN apt-get install -y nodejs libzip-dev zip unzip
+# Update Debian Bullseye repositories to archive.debian.org (Bullseye EOL)
+RUN echo "deb http://archive.debian.org/debian bullseye main" > /etc/apt/sources.list && \
+    echo "deb http://archive.debian.org/debian-security bullseye-security main" >> /etc/apt/sources.list && \
+    echo "deb http://archive.debian.org/debian bullseye-updates main" >> /etc/apt/sources.list && \
+    echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99no-check-valid-until
+
+# Install system dependencies
+RUN apt-get update -y && \
+    apt-get install -y libzip-dev zip unzip && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install Node.js 12 and npm from official node image
+COPY --from=node:12.19.0 /usr/local/bin/node /usr/local/bin/node
+COPY --from=node:12.19.0 /usr/local/lib/node_modules /usr/local/lib/node_modules
+RUN ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm && \
+    ln -s /usr/local/lib/node_modules/npm/bin/npx-cli.js /usr/local/bin/npx
 
 RUN docker-php-ext-configure zip
 RUN docker-php-ext-install pdo pdo_mysql bcmath zip
@@ -22,3 +35,4 @@ RUN chown -R www-data:www-data /var/www/html
 RUN a2enmod rewrite
 
 ENTRYPOINT ["docker/php/entrypoint.sh"]
+
